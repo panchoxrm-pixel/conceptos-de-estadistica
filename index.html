@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadística aplicada</title>
+    <title>Estadística Aplicada</title>
     <link rel="stylesheet" href="estadistica.css">
-     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <header>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <label for="menu-toggle" class="menu-btn-container" aria-label="Abrir menú de lecciones">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+    </label>
+
+    <label for="menu-toggle" class="menu-overlay"></label>
+
+    <aside class="sidebar-navigation">
+        <div class="sidebar-header">
+            <h3>Navegación</h3>
+        </div>
+        <nav class="sidebar-menu">
+            <label for="menu-toggle" onclick="mostrarSeccion('media')">1. Media</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('mediana')">2. Mediana</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('moda')">3. Moda</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('porcentaje')">4. Porcentaje</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('tendencia')">5. Tendencia</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('interpretacion-de-graficos')">6. Interpretación de Gráficos</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('analisis-de-datos')">7. Análisis de Datos</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('deteccion-basica-de-anomalias')">8. Detección de Anomalías</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('repaso')" class="enlace-repaso">Repaso General</label>
+        </nav>
+    </aside>
+
+    <header class="main-desktop-header">
        <h1>Temas clave de estadística aplicada</h1>       
     </header>
-    <nav>
-        <button onclick="mostrarSeccion('media')">1. Media</button>
-        <button onclick="mostrarSeccion('mediana')">2. Mediana</button>
-        <button onclick="mostrarSeccion('moda')">3. Moda</button>
-        <button onclick="mostrarSeccion('porcentaje')">4. Porcentaje</button>
-        <button onclick="mostrarSeccion('tendencia')">5. Tendencia</button>
-        <button onclick="mostrarSeccion('interpretacion-de-graficos')">6. Interpretación de gráficos</button>
-        <button onclick="mostrarSeccion('analisis-de-datos')">7. Análisis de datos</button>
-        <button onclick="mostrarSeccion('deteccion-basica-de-anomalias')">8. Detección básica de anomalías</button>
-        <button onclick="mostrarSeccion('repaso')">Repaso</button>
-    </nav>
 
     <section id="media" class="contenedor-tema"> <!-- Diego --> 
         <h2>Media</h2>
         <h3 class="subtitulo-tema">¿Qué es la media y para qué sirve?</h2>
            <p>La media es una medida estadística con la cual se obtiene un valor promedio de un conjunto de datos. 
-            Sirve para funcionar el centro de gravedad o punto de equilibrio donde los 
-            valores altos y bajos se compensan perfectamente.</p>
+            Sirve para encontrar un punto de equilibrio donde los valores altos y 
+            bajos se compensan perfectamente.</p>
         <h3 class="subtitulo-tema">Fórmula</h2>
            \[\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
-           <h4>¿Qué significa cada componente?</h4>
-           <p>xˉ: Media aritmética o promedio</p>
-           <p>x1,x2,x3,…,xn: Valores o datos del conjunto</p>
-           <p>n: Cantidad total de datos</p>
+           <h4>¿Qué significa cada símbolo de la fórmula?</h4>
+           <p>\(\bar{x}\) = Media aritmética o promedio</p>  //arreglar
+           <p>x1,x2,x3,…,xn = Valores o datos del conjunto</p>
+           <p>n = Cantidad total de datos</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h2>
         <h4>Tema: Tasa de empleo adecuado</h4>
         <h4>1. Identificar la cantidad de valores</h4>
@@ -93,12 +112,12 @@
             comportamientos o tendencias.</p>        
         <h3 class="subtitulo-tema">Fórmula</h3>
         <p>\[Mo = L_i + \frac{f_i - f_{i-1}}{(f_i - f_{i-1}) + (f_i - f_{i+1})}\cdot A_i\]</p>
-        <h4>Significado de cada componente:</h4>
-        <p>Li: Límite inferior del intervalo de la clase modal.</p>
-        <p>fi: Frecuencia absoluta de la clase modal.</p>
-        <p>fi-1: Frecuencia absoluta de la clase inmediatamente anterior a la clase modal.</p>
-        <p>fi+1: Frecuencia absoluta de la clase inmediatamente posterior a la clase modal.</p>
-        <p>Ai: Amplitud del intervalo</p>
+        <h4>¿Qué significa cada símbolo de la fórmula?</h4>
+        <p>Li = Límite inferior del intervalo de la clase modal.</p>
+        <p>fi = Frecuencia absoluta de la clase modal.</p>
+        <p>fi-1 = Frecuencia absoluta de la clase inmediatamente anterior a la clase modal.</p>
+        <p>fi+1 = Frecuencia absoluta de la clase inmediatamente posterior a la clase modal.</p>
+        <p>Ai = Amplitud del intervalo</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Femicidios en Ecuador (2024)</h4>
         <img src="modaImagen.png"></img>
@@ -159,11 +178,11 @@
         <h3 class="subtitulo-tema">Fórmula</h3>
         <p>\[T = \frac{Y_2 - Y_1}{X_2 - X_1}\]</p>
         <h4>¿Qué significa cada componente?</h4>
-        <p>T: Tasa de cambio o pendiente</p>
-        <p>Y1: Primer valor de Y</p>
-        <p>Y2: Segundo valor de Y</p>
-        <p>X1: Primer valor de X</p>
-        <p>X2: Segundo valor de X</p>
+        <p>T = Tasa de cambio o pendiente</p>
+        <p>Y1 = Primer valor de Y</p>
+        <p>Y2 = Segundo valor de Y</p>
+        <p>X1 = Primer valor de X</p>
+        <p>X2 = Segundo valor de X</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Incremento de homicidios en Ecuador</h4>
         <img src="tendenciaImg.png"></img>
@@ -200,28 +219,10 @@
             Sirve para tomar decisiones estratégicas basadas en el comportamiento de los clientes, optimizar
             las operaciones reduciendo costos e ineficiencias, e impulsar la innovación mediante productos
             y servicios personalizados según las necesidades del usuario.</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <h4>Tema: Canasta familiar básica en Ecuador</h4>
-        <img src="analisisDatosImg.png"></img>
-        <h4>1. Ordenar los datos</h4>
-        <p>774, 797, 804, 807, 828, 829, 843, 855, 865, 873</p>
-        <h4>2. Valor máximo y mínimo</h4>
-        <p>\[Máximo: Cuenca = 873\]</p>
-        <p>\[\text{Mínimo:}\text{ Santo Domingo} = 774\]</p>
-        <h4>Diferencia:</h4>
-        <p>\[873−774=99\]</p>
-        <p>Esto significa que hay una diferencia de 99 dólares entre la ciudad más cara y la más barata.</p>
-        <h4>3. Media (promedio)</h4>
-        <p>\[\bar{x} = \frac{8275}{10}\]\[\text{Promedio} = 827.5 \text{ dólares}\]</p>
-        <h4>4. Interpretación</h4>
-        <p>* La canasta básica promedio en Ecuador es de aproximadamente $827.5.</p>
-        <p>* Varias ciudades están cerca de este valor (Quito, Guayaquil, Loja).</p>
-        <p>* Cuenca es la ciudad con mayor costo.</p>
-        <p>* Santo Domingo tiene el costo más bajo.</p>
-        <h4>5. Conclusión</h4>
-        <p>El análisis de estos datos permite ver que el costo de vida en Ecuador 
-            no es igual en todas las ciudades, pero se mantiene alrededor de los $820–$830 en 
-            promedio, según la canasta básica del INEC.</p>
+        <h3 class="subtitulo-tema">Ejemplo de un análisis de datos</h3>  \\adaptar este apartado
+        <h4>Tema: Canasta familiar vital en Ecuador</h4>
+        <img src="canastaVitalImg.png"></img>
+        <P>Para realizar una evualuación sobre el costo de la canasta vital siguiendo INEC-2026,  </P>
         <h3 class="subtitulo-tema">Ejercicio</h3>
         <p>...</p>
     </section>
@@ -247,5 +248,6 @@
     </footer>
    
 </body>
+
      <script src="estadistica.js"></script>
 </html>

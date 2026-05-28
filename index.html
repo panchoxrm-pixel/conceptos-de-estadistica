@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadística aplicada</title>
     <link rel="stylesheet" href="estadistica.css">
+     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -25,11 +26,49 @@
     <section id="media" class="contenedor-tema"> <!-- Diego --> 
         <h2>Media</h2>
         <h3 class="subtitulo-tema">¿Qué es la media y para qué sirve?</h2>
-        <p>...</p>
+           <p>La media es una medida estadística con la cual se obtiene un valor promedio de un conjunto de datos. 
+            Sirve para funcionar el centro de gravedad o punto de equilibrio donde los 
+            valores altos y bajos se compensan perfectamente.</p>
         <h3 class="subtitulo-tema">Fórmula</h2>
-        <p>...</p>
+           \[\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
+           <h4>¿Qué significa cada componente?</h4>
+           <p>xˉ: Media aritmética o promedio</p>
+           <p>x1,x2,x3,…,xn: Valores o datos del conjunto</p>
+           <p>n: Cantidad total de datos</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h2>
-        <p>...</p>
+        <h4>Tema: Tasa de empleo adecuado</h4>
+        <h4>1. Identificar la cantidad de valores</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador nacional en % respecto a la PEA</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                    <th>2025</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tasa de empleo adecuado</td>
+                    <td>32,5</td>
+                    <td>34,4</td>
+                    <td>36,3</td>
+                    <td>35,9</td>
+                    <td>37,1</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <h4>2. Sumar todos los valores</h4>
+        \[\bar{x} = \frac{32,5 + 34,4 + 36,3 + 35,9 + 37,1}{5} = \frac{176,2}{5}\]
+        <h4>3. Dividir la suma total para la cantidad</h4>
+        \[\bar{x} = \frac{176,2}{5} = 35,24\]
+        
+        
+        
+
         <h3 class="subtitulo-tema">Calculadora para encontrar la media</h2>
         <p>...</p>
     </section>
@@ -49,11 +88,52 @@
     <section id="moda" class="contenedor-tema"> <!-- Diego -->
         <h2>Moda</h2>
         <h3 class="subtitulo-tema">¿Qué es la moda y para qué sirve?</h3>
-        <p>...</p>        
+        <p>La moda estadística es el valor que más se repite dentro de un conjunto de datos. Sirve para identificar 
+            el dato más común o frecuente en un grupo. Se utiliza mucho para analizar preferencias, 
+            comportamientos o tendencias.</p>        
         <h3 class="subtitulo-tema">Fórmula</h3>
-        <p>...</p>
+        <p>\[Mo = L_i + \frac{f_i - f_{i-1}}{(f_i - f_{i-1}) + (f_i - f_{i+1})}\cdot A_i\]</p>
+        <h4>Significado de cada componente:</h4>
+        <p>Li: Límite inferior del intervalo de la clase modal.</p>
+        <p>fi: Frecuencia absoluta de la clase modal.</p>
+        <p>fi-1: Frecuencia absoluta de la clase inmediatamente anterior a la clase modal.</p>
+        <p>fi+1: Frecuencia absoluta de la clase inmediatamente posterior a la clase modal.</p>
+        <p>Ai: Amplitud del intervalo</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
+        <h4>Tema: Femicidios en Ecuador (2024)</h4>
+        <img src="modaImagen.png"></img>
+        <h4>1. Agrupar los datos</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Intervalo de casos</th>
+                    <td>20 – 30</td>
+                    <td>30 – 40</td>
+                    <td>40 – 50</td>
+                    <td>50 – 80</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Frecuencia</th>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <h4>2. Identificar los valores</h4>
+        <p>\[\begin{aligned}L_i &= 20 \\f_i &= 3 \\f_{i-1} &= 0 \\f_{i+1} &= 1 \\t_i &= 10\end{aligned}\]</p>
+        <h4>3. Reemplazar en la fórmula</h4>
+        <p>\[Mo = 20 + \frac{3-0}{(3-0)+(3-1)} \cdot 10\]</p>
+        <h4>3. Resolver</h4>
+        <p>\[Mo = 20 + \frac{3}{3+2} \cdot 10\]\[Mo = 20 + \frac{3}{5}(10)\]\[Mo = 20 + 6\]\[Mo = 26\]</p>
+        <h4>4. Resultado</h4>
+        <p>\[Mo = 26\]</p>
+        <p>Esto significa que el número más frecuente de casos de femicidios 
+            entre las provincias analizadas se encuentra alrededor de 26 casos.</p>
         <h3 class="subtitulo-tema">Calculadora para encontrar la moda</h3>
         <p>...</p>
     </section>
@@ -73,11 +153,30 @@
     <section id="tendencia" class="contenedor-tema"> <!-- Diego -->
         <h2>Tendencia</h2>
         <h3 class="subtitulo-tema">¿Qué es la tendencia y para qué sirve?</h3>
-        <p>...</p>
+        <p>La tendencia en estadística es la dirección o comportamiento que siguen los datos a lo largo del tiempo.
+           Permite identificar si algo aumenta, disminuye o se mantiene estable. Sirve para analizar cambios en el tiempo, 
+           predecir comportamientos futuros y tomar decisiones basadas en datos.</p>
         <h3 class="subtitulo-tema">Fórmula</h3>
-        <p>...</p>
+        <p>\[T = \frac{Y_2 - Y_1}{X_2 - X_1}\]</p>
+        <h4>¿Qué significa cada componente?</h4>
+        <p>T: Tasa de cambio o pendiente</p>
+        <p>Y1: Primer valor de Y</p>
+        <p>Y2: Segundo valor de Y</p>
+        <p>X1: Primer valor de X</p>
+        <p>X2: Segundo valor de X</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
+        <h4>Tema: Incremento de homicidios en Ecuador</h4>
+        <img src="tendenciaImg.png"></img>
+        <h4>1. Identificar los valores</h4>
+        <p>\[\begin{aligned}Y_2 &= 8008 \\Y_1 &= 2495 \\X_2 &= 2023 \\X_1 &= 2021\end{aligned}\]</p>
+        <h4>2. Reemplazar en la fórmula</h4>
+        <p>\[T = \frac{8008 - 2495}{2023 - 2021}\]</p>
+        <h4>3. Resolver</h4>
+        <p>\[T = \frac{5513}{2}\]\[T = 2756.5\]</p>
+        <h4>4. Resultado</h4>
+        <p>\[T = 2756.5\]</p>
+        <p>Esto significa que en Ecuador hubo un aumento promedio de aproximadamente 2757 homicidios 
+            por año entre 2021 y 2023, mostrando una tendencia creciente de violencia.</p>
         <h3 class="subtitulo-tema">Calculadora para encontrar tendencias</h3>
         <p>...</p>
     </section>
@@ -95,11 +194,34 @@
 
     <section id="analisis-de-datos" class="contenedor-tema"> <!-- Diego -->
         <h2>Análisis de datos</h2>
-        <p>...</p>
         <h3 class="subtitulo-tema">¿Qué es el análisis de datos y para qué sirve?</h3>
-        <p>...</p>
+        <p>El análisis de datos es el proceso de examinar, limpiar, transformar y modelar datos con el 
+            objetivo de descubrir información útil, llegar a conclusiones y apoyar la toma de decisiones. 
+            Sirve para tomar decisiones estratégicas basadas en el comportamiento de los clientes, optimizar
+            las operaciones reduciendo costos e ineficiencias, e impulsar la innovación mediante productos
+            y servicios personalizados según las necesidades del usuario.</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
+        <h4>Tema: Canasta familiar básica en Ecuador</h4>
+        <img src="analisisDatosImg.png"></img>
+        <h4>1. Ordenar los datos</h4>
+        <p>774, 797, 804, 807, 828, 829, 843, 855, 865, 873</p>
+        <h4>2. Valor máximo y mínimo</h4>
+        <p>\[Máximo: Cuenca = 873\]</p>
+        <p>\[\text{Mínimo:}\text{ Santo Domingo} = 774\]</p>
+        <h4>Diferencia:</h4>
+        <p>\[873−774=99\]</p>
+        <p>Esto significa que hay una diferencia de 99 dólares entre la ciudad más cara y la más barata.</p>
+        <h4>3. Media (promedio)</h4>
+        <p>\[\bar{x} = \frac{8275}{10}\]\[\text{Promedio} = 827.5 \text{ dólares}\]</p>
+        <h4>4. Interpretación</h4>
+        <p>* La canasta básica promedio en Ecuador es de aproximadamente $827.5.</p>
+        <p>* Varias ciudades están cerca de este valor (Quito, Guayaquil, Loja).</p>
+        <p>* Cuenca es la ciudad con mayor costo.</p>
+        <p>* Santo Domingo tiene el costo más bajo.</p>
+        <h4>5. Conclusión</h4>
+        <p>El análisis de estos datos permite ver que el costo de vida en Ecuador 
+            no es igual en todas las ciudades, pero se mantiene alrededor de los $820–$830 en 
+            promedio, según la canasta básica del INEC.</p>
         <h3 class="subtitulo-tema">Ejercicio</h3>
         <p>...</p>
     </section>

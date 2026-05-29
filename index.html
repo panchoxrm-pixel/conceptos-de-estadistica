@@ -37,12 +37,107 @@
     <section id="mediana" class="contenedor-tema"> <!-- Francisco -->
         <h2>Mediana</h2>
         <h3 class="subtitulo-tema">¿Qué es la mediana y para qué sirve?</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Fórmula</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h2>
+            <p>
+                Es el número que queda justo en el centro de una lista de datos ordenados de menor a mayor.
+                Sirve para evitar que los valores atípicos (muy bajos o muy altos) distorsionen la 
+                realidad de los datos, algo que sí ocurre fácilmente con el promedio.
+            </p>
+        <h3 class="subtitulo-tema">Fórmulas</h2>                              
+            <p>Cuando la cantidad de valores es impar, la mediana es el valor central:</p> 
+            <p>$$\tilde{x} = x_{\left(\frac{n + 1}{2}\right)}$$</p>             
+            <p>Cuando la cantidad de valores es par, la mediana es el promedio de los 2 valores centrales:</p> 
+            <p>$$\tilde{x} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$</p>
+            <div class="glosario-formulas">
+    <h4>Significado de los símbolos de las fórmulas</h4>
+    <ul>
+        <li><strong>\(\tilde{x}\)</strong> : Es el símbolo de la mediana.</li>
+        <li><strong>\(x\)</strong> : Representa los datos ordenados de menor a mayor (y con un subíndice, representa un dato específico).</li>
+        <li><strong>\(n\)</strong> : Indica la cantidad total de datos.</li>
+        <li><strong>Subíndices entre paréntesis —como \(x_{(4)}\)—</strong> : Señalan la posición exacta que ocupa el dato dentro de la lista.</li>
+    </ul> 
+            <h3 class="subtitulo-tema">Ejemplos reales paso a paso</h3>
+            <h4>Tema 1: El costo de la canasta familiar básica en ciudades de la Costa ecuatoriana, en abril 2026</h4>
+            <h4>Paso 1. Ordenar los datos de menor a mayor.</h4>
+            <p>Al colocar de menor a mayor los costos de la canasta reportados por el INEC de las ciudades que monitorea, obtenemos lo siguiente: </p>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Santo Domingo</th>
+                        <th>Esmeraldas</th>
+                        <th>Machala</th>
+                        <th>Guayaquil</th>
+                        <th>Manta</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Costo</th>
+                            <td>$ 773,71</td>
+                            <td>$ 797,02</td>
+                            <td>$ 804,07</td>
+                            <td>$ 843,25</td>
+                            <td>$ 854,83</td>
+                        </tr>
+                        <tr>
+                            <th>Posición del dato en la lista</th>
+                            <td>\(x_{(1)}\)</td>
+                            <td>\(x_{(2)}\)</td>
+                            <td>\(x_{(3)}\)</td>
+                            <td>\(x_{(4)}\)</td>
+                            <td>\(x_{(5)}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h4>Paso 2. Contar el total de los datos e identificar si es par o impar.</h4>
+                <p>La muestra consta de 5 datos; por lo tanto, la cantidad es impar.</p>
+            <h4>Paso 3. Escoger la fórmula correspondiente a impar.</h4>
+                <p>$$\tilde{x} = x_{\left(\frac{n + 1}{2}\right)}$$</p>
+            <h4>Paso 4. Calcular la posición del valor central a partir de la cantidad de datos.</h4>
+                <p>$$\tilde{x} = x_{\left(\frac{5 + 1}{2}\right)} = x_{(3)}$$</p>
+            <h4>Paso 5. Identificar el valor del dato central, el que queda justo en medio de la lista. El resultado es la mediana.</h4>
+                <p>$$\tilde{x} = $ 804,07$$</p>
+            <h4></h4>
+
+            <h4>Tema 2: El costo de la canasta familiar básica en ciudades de la Sierra ecuatoriana, en abril 2026</h4>
+            <h4>Paso 1. Ordenar los datos de menor a mayor.</h4>
+            <p>Al colocar de menor a mayor los costos de la canasta reportados por el INEC de las ciudades que monitorea, obtenemos lo siguiente: </p>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Ambato</th>
+                        <th>Loja</th>
+                        <th>Quito</th>
+                        <th>Cuenca</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Costo</th>
+                            <td>$ 807,43</td>
+                            <td>$ 827,70</td>
+                            <td>$ 865,22</td>
+                            <td>$ 873,14</td>
+                        </tr>
+                        <tr>
+                            <th>Posición del dato en la lista</th>
+                            <td>\(x_{(1)}\)</td>
+                            <td>\(x_{(2)}\)</td>
+                            <td>\(x_{(3)}\)</td>
+                            <td>\(x_{(4)}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h4>Paso 2. Contar el total de los datos e identificar si es par o impar.</h4>
+                <p>La muestra consta de 4 datos; por lo tanto, la cantidad es par.</p>
+            <h4>Paso 3. Escoger la fórmula correspondiente a par.</h4>
+                <p>$$\tilde{x} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$</p>
+            <h4>Paso 4. Calcular la posición de los 2 valores centrales a partir de la cantidad de datos.</h4>
+                <p>
+                    $$\tilde{x} = \frac{x_{\left(\frac{4}{2}\right)} + x_{\left(\frac{4}{2} + 1\right)}}{2} = 
+                    \frac{x_{(2)} + x_{(3)}}{2}$$
+                </p>
+            <h4>Paso 5. Identificar los valores de los 2 datos centrales y promediarlos. El resultado es la mediana.</h4>
+                <p>$$\tilde{x} = \frac{827,70 + 865,22}{2} = $ 846.46$$</p>
+            
+            <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h2>
         <p>...</p>
     </section>
 
@@ -61,13 +156,51 @@
     <section id="porcentaje" class="contenedor-tema"> <!-- Francisco -->
         <h2>Porcentaje</h2>
         <h3 class="subtitulo-tema">¿Qué es el porcentaje y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Fórmula</h3>
-        <p>...</p>        
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>       
+        <p>
+            Es una forma de expresar una cantidad como una fracción de 100 partes iguales, usando el símbolo %. 
+            Sirve para comparar datos de manera sencilla, estandarizar mediciones y mostrar cambios con claridad
+            en diversos asuntos como descuentos comerciales, estadísticas demográficas, tasas de interés financieras, etc. </p>
+        <h3 class="subtitulo-tema">Fórmulas</h3>
+            <p>Para calcular la parte, cuando se conoce el porcentaje y el total:</p>
+            <p>\[ Parte = \frac{Porcentaje \times Total}{100} \]</p>
+            <p>Para calcular el porcentaje, cuando se conoce la parte y el total:</p>
+            <p>\[ Porcentaje = \frac{Parte \times 100}{Total} \]</p> 
+            <p>Para calcular el total, cuando se conoce la parte y el porcentaje:</p>
+            <p>\[ Total = \frac{Parte \times 100}{Porcentaje} \]</p>  
+                 
+        <h3 class="subtitulo-tema">Ejemplos reales paso a paso</h3>
+        
+        <h4>Tema 1. Provincias de la región de la Amazonía</h4>
+            <p>¿Cuántas provincias son amazónicas si juntas corresponden al 25 % de las 24 provincias que conforman el Ecuador?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Porcentaje: 25</p>
+            <p>Total: 24</p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+           <p> \[ Parte = \frac{Porcentaje \times Total}{100} = \frac{25 \times 24}{100} = \frac{600}{100} = 6\] </p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>La Amazonía tiene 6 provincias.</p>
+        
+            <h4>Tema 2. Provincias de la región Sierra</h4>
+            <p>¿A qué porcentaje corresponden las 10 provincias de la Sierra, si el Ecuador está conformado por 24 provincias?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Parte: 10</p>
+            <p>Total: 24</p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+            <p>\[ Porcentaje = \frac{Parte \times 100}{Total} = \frac{10 \times 100}{24} = \frac{1000}{24} = 41,6\widehat{6} \]</p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>Las 10 provincias de la Sierra corresponden al \( 41,6\widehat{6} \) % del total de 24 provincias del Ecuador.</p>
+        
+            <h4>Tema 3. Cantidad de provincias del Ecuador</h4>
+            <p>¿Cuántas provincias hay en el Ecuador, conociendo que las 7 provincias de la Costa corresponden al \( 29,1\widehat{6} \) %?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Parte: 7</p>
+            <p>Porcentaje: \( 29,1\widehat{6} %? \) <span class="aclaracion-matematica">(el arco sobre el 6 significa que este dígito se repite indefinidamente)</span></p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+            <p>\[ Total = \frac{Parte \times 100}{Porcentaje} = \frac{7 \times 100}{29,17} = \frac{700}{29,1\widehat{6}} = 24 \]</p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>El Ecuador está conformado por 24 provincias.</p>             
         <h3 class="subtitulo-tema">Calculadora para encontrar porcentajes</h3>
-        <p>...</p>   
+            <p>...</p>   
     </section>
 
     <section id="tendencia" class="contenedor-tema"> <!-- Diego -->
@@ -83,19 +216,58 @@
     </section>
 
     <section id="interpretacion-de-graficos" class="contenedor-tema"> <!-- Francisco -->
-        <h2>Interpretación de gráficos</h2>
-        <p>...</p>
+        <h2>Interpretación de gráficos</h2>        
         <h3 class="subtitulo-tema">¿Qué es la interpretación de gráficos y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejercicio</h3>
-        <p>...</p>
+        <p>
+            Consiste en analizar representaciones visuales de datos 
+            —como barras, líneas o gráficos circulares— y obtener información importante. Sirve para
+            simplificar datos complejos y facilitar la identificación de patrones, tendencias 
+            y relaciones, con el fin de comprender un tema o tomar decisiones más informadas.
+        </p>
+
+        <h4>Gráfico de barras</h4>
+        <p>
+            Representa datos mediante barras rectangulares de diferentes tamaños. 
+            Sirve para para comparar cantidades entre distintas categorías de forma clara y visual.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="CantonesPoblados.png" alt="Cantones más poblados del Ecuador" style="width: 50%; max-width: 500px; height: auto;">
+        <p>
+            Interpretando el gráfico, observamos que Guayaquil y Quito son los cantones más habitados del Ecuador, mientras que Cuenca, 
+            Santo Domingo y Ambato registran poblaciones considerablemente más bajas que las dos primeras ciudades.          
+        </p>
+        
+        <h4>Gráfico de líneas</h4>
+        <p>           
+            Representa datos mediante puntos unidos por líneas rectas. 
+            Sirve para mostrar cambios, tendencias o variaciones de una o más variables a lo largo del tiempo.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="CostoCanastaFamiliar2017-2026.png" alt="Costo de canasta familiar básica entre 2017 y 2026" style="width: 70%; max-width: 850px; height: auto;">
+        <p>
+            El gráfico muestra que entre el 2017 y casi todo el 2021, el costo de la canasta estuvo relativemente estable, rondando los $ 710;
+            pero en el tiempo posterior, desde finales desde el 2021 hasta abril 2026, el costo ha tenido un ascenso constante, llegando a superar 
+            los $ 820, lo cual evidencia cómo en los últimos años se ha encarecido el presupuesto necesario para cubrir las necesidades básicas de un hogar.          
+        </p>
+
+        <h4>Gráfico circular (pastel)</h4>
+        <p>
+            Representa datos mediante sectores de un círculo, donde cada parte corresponde a una proporción del total.
+            Sirve para visualizar y comparar porcentajes o cantidades relativas, de manera clara y rápida.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="TerritorioEcuador.png" alt="Distribución territorial del Ecuador" style="width: 50%; max-width: 500px; height: auto;">
+        <br>
+            <p>
+            Este gráfico circular demuestra una notable asimetría en la distribución territorial del Ecuador, donde la región del Oriente (Amazonía) representa
+            casi la mitad de la extensión total del país con un 45.15%. El resto del territorio se concentra de manera equitativa entre la Costa (26.78%) y la Sierra (24.65%),
+            mientras que la región Insular (Galápagos) junto con las zonas no delimitadas constituyen una porción marginal que, sumadas, apenas alcanzan el 3.42% del suelo nacional.        
+        </p>
+
     </section>
 
     <section id="analisis-de-datos" class="contenedor-tema"> <!-- Diego -->
-        <h2>Análisis de datos</h2>
-        <p>...</p>
+        <h2>Análisis de datos</h2>        
         <h3 class="subtitulo-tema">¿Qué es el análisis de datos y para qué sirve?</h3>
         <p>...</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
@@ -105,11 +277,21 @@
     </section>
 
     <section id="deteccion-basica-de-anomalias" class="contenedor-tema"> <!-- Francisco -->
-        <h2>Detección básica de anomalías</h2>
-        <p>...</p>
+        <h2>Detección básica de anomalías</h2>       
         <h3 class="subtitulo-tema">¿Qué es la deteccion básica de anomalías y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
+        <p>
+            Es el proceso de identificar datos, comportamientos o valores que se alejan significativamente de lo normal dentro de un conjunto de información.
+            Sirve para descubrir errores, fraudes, riesgos o situaciones inusuales que pueden ser importantes para analizar y tomar decisiones.
+        </p>
+        <p>Se la puede utilizar para encontrar fraudes (por ejemplo, en tarjetas de crédito), fallos en maquinaria, intrusiones en redes, errores en datos 
+            o comportamientos raros en sistemas, permitiendo actuar a tiempo para prevenir riesgos o pérdidas.
+        </p>
+        <p>
+            La detección de anomalías está profundamente ligada a la estadística, porque utiliza sus principios fundamentales 
+            para cuantificar qué es "normal" y qué es un "desvío"; para ello, usa los conceptos vistos en este página web, como 
+            media, mediana, moda y tendencia, además de otros como desviación estándar, dispersión y probabilidad.
+        </p>
+        <h3 class="subtitulo-tema">Ejemplo:</h3>
         <p>...</p>
         <h3 class="subtitulo-tema">Ejercicio</h3>
         <p>...</p>
@@ -123,7 +305,7 @@
     <footer>
         Creado por Francisco Rodríguez y Diego Chicaiza
     </footer>
-   
+   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
      <script src="estadistica.js"></script>
 </html>

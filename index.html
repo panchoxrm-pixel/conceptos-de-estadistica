@@ -48,7 +48,7 @@
             <p>Cuando la cantidad de valores es par, la mediana es el promedio de los 2 valores centrales:</p> 
             <p>$$\tilde{x} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$</p>
             <div class="glosario-formulas">
-    <h4>Significado de los símbolos de las fórmulas</h4>
+    <h4>¿Qué significa cada símbolo de las fórmulas?</h4>
     <ul>
         <li><strong>\(\tilde{x}\)</strong> : Es el símbolo de la mediana.</li>
         <li><strong>\(x\)</strong> : Representa los datos ordenados de menor a mayor (y con un subíndice, representa un dato específico).</li>
@@ -137,8 +137,42 @@
             <h4>Paso 5. Identificar los valores de los 2 datos centrales y promediarlos. El resultado es la mediana.</h4>
                 <p>$$\tilde{x} = \frac{827,70 + 865,22}{2} = $ 846.46$$</p>
             
-            <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h2>
-        <p>...</p>
+            <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h3>
+
+                <p>
+                    A continuación, puedes calcular la mediana de la lista de valores que ingreses:
+                </p>
+
+                <p>
+                    Ingresa un valor en cada línea:
+                </p>
+
+                <textarea
+                    id="datos-mediana"
+                    rows="8"
+                    cols="15"
+                    placeholder="24
+                26
+                25,28
+                27
+                24
+                0,26
+                1"
+                    oninput="validarEntradaMediana(this)"
+                ></textarea>
+
+                <br><br>
+
+                <button onclick="calcularMediana()">
+                    Calcular
+                </button>
+
+                <p id="error-mediana"></p>
+
+                <p id="datos-ordenados"></p>
+
+                <p id="formula-mediana"></p>                        
+        
     </section>
 
     <section id="moda" class="contenedor-tema"> <!-- Diego -->
@@ -198,9 +232,96 @@
         <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
             <p>\[ Total = \frac{Parte \times 100}{Porcentaje} = \frac{7 \times 100}{29,17} = \frac{700}{29,1\widehat{6}} = 24 \]</p>
         <h4>Paso 3. Comunicar el resultado</h4>
-            <p>El Ecuador está conformado por 24 provincias.</p>             
+            <p>El Ecuador está conformado por 24 provincias.</p>  
+            
         <h3 class="subtitulo-tema">Calculadora para encontrar porcentajes</h3>
-            <p>...</p>   
+            <p>A continuación, puedes hacer cualquier cálculo de porcentaje, usando estas 3 calculadoras:</p>
+            
+            </p><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js?config=TeX-mml-chtml"></script>
+
+            <p>Para calcular la parte, cuando se conoce el porcentaje y el total:</p>
+
+            <div class="linea-unica-porcentaje">
+                
+                <div class="formula-teorica">
+                    \[ \text{Parte} = \frac{\text{Porcentaje} \times \text{Total}}{100} \]
+                </div>
+                
+                <span class="separador-igual">=</span>
+                
+                <div class="fraccion-html">
+                    <div class="numerador-html">
+                        <input type="text" id="txt-porcentaje" placeholder="Porcentaje">
+                        <span class="operador-por">×</span>
+                        <input type="text" id="txt-total" placeholder="Total">
+                    </div>
+                    <div class="denominador-html">
+                        100
+                    </div>
+                </div>
+                
+                <span class="separador-igual">=</span>
+                
+                <button type="button" id="btn-calcular" class="boton-resultado">Calcular</button>
+                
+            </div>                                
+            
+            <p>Para calcular el porcentaje, cuando se conoce la parte y el total:</p>
+
+    <div class="linea-unica-porcentaje">
+        
+        <div class="formula-teorica">
+            \[ \text{Porcentaje} = \frac{\text{Parte} \times 100}{\text{Total}} \]
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <div class="fraccion-html">
+            <div class="numerador-html">
+                <input type="text" id="txt-parte-pct" placeholder="Parte">
+                <span class="operador-por">×</span>
+                <span class="denominador-html" style="padding: 0 4px;">100</span>
+            </div>
+            <div class="denominador-html">
+                <input type="text" id="txt-total-pct" placeholder="Total">
+            </div>
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <button type="button" id="btn-calcular-pct" class="boton-resultado">Calcular</button>
+    </div>
+
+
+    <p>Para calcular el total, cuando se conoce la parte y el porcentaje:</p>
+
+    <div class="linea-unica-porcentaje">
+        
+        <div class="formula-teorica">
+            \[ \text{Total} = \frac{\text{Parte} \times 100}{\text{Porcentaje}} \]
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <div class="fraccion-html">
+            <div class="numerador-html">
+                <input type="text" id="txt-parte-tot" placeholder="Parte">
+                <span class="operador-por">×</span>
+                <span class="denominador-html" style="padding: 0 4px;">100</span>
+            </div>
+            <div class="denominador-html">
+                <input type="text" id="txt-porcentaje-tot" placeholder="Porcentaje">
+            </div>
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <button type="button" id="btn-calcular-tot" class="boton-resultado">Calcular</button>
+    </div>
+        
+    </p>
+
     </section>
 
     <section id="tendencia" class="contenedor-tema"> <!-- Diego -->
@@ -287,14 +408,79 @@
             o comportamientos raros en sistemas, permitiendo actuar a tiempo para prevenir riesgos o pérdidas.
         </p>
         <p>
-            La detección de anomalías está profundamente ligada a la estadística, porque utiliza sus principios fundamentales 
-            para cuantificar qué es "normal" y qué es un "desvío"; para ello, usa los conceptos vistos en este página web, como 
-            media, mediana, moda y tendencia, además de otros como desviación estándar, dispersión y probabilidad.
+            Está profundamente ligada a la estadística, porque utiliza sus principios fundamentales para cuantificar qué es habitual y qué es un
+             "desvío"; para ello, usa los conceptos vistos en este página web, como media, mediana, moda y tendencia, además de otros como 
+             desviación estándar, dispersión y probabilidad.
         </p>
         <h3 class="subtitulo-tema">Ejemplo:</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejercicio</h3>
-        <p>...</p>
+        <p>
+            Imaginemos una gran empresa exportadora ecuatoriana.
+            Entre 2019 y 2024 declara utilidades cercanas a los 25 millones de dólares.
+            Sin embargo, en 2025 reporta una utilidad de apenas 1 millón de dólares.
+        </p>
+
+        <table>
+            <tr>
+                <th>Año</th>
+                <th>Utilidad (millones USD)</th>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>2025</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <p>
+            La <strong>mediana</strong> es 25 millones de dólares.
+            Esto indica que, en condiciones normales, la empresa suele obtener utilidades cercanas a ese valor.
+        </p>
+
+        <p>
+            La <strong>media</strong> es 21,86 millones de dólares.
+            Este valor es menor que la mediana porque la utilidad de 2025 reduce considerablemente el promedio.
+        </p>
+
+        <p>
+            Además, la <strong>tendencia</strong> entre 2019 y 2024 es estable,
+            ya que las utilidades se mantienen entre 24 y 27 millones de dólares.
+        </p>
+
+        <p>
+            Sin embargo, en 2025 la utilidad cae a 1 millón de dólares.
+            Este valor presenta una gran <strong>desviación</strong> respecto al comportamiento habitual de la serie.
+        </p>
+
+        <p>
+            Por ello, el dato de 2025 se considera una <strong>anomalía</strong> o valor atípico.
+            La estadística no permite determinar la causa de esta diferencia.
+            Sin embargo, una variación tan extrema justificaría una revisión más detallada para descartar errores de registro,
+            pérdidas extraordinarias o posibles casos de evasión fiscal.
+        </p>
+                
     </section>
 
     <section id="repaso" class="contenedor-tema-repaso">

@@ -1,3 +1,4 @@
+/* Borrar esta forma de navegación el momento de hacer el merge, porque va a ser reemplazada por el menú desplegable hamburguesa */
 section {
       display: none;
       padding: 20px;
@@ -11,3 +12,102 @@ section {
     section.activa {
       display: block;
     }
+
+  /* Estilos Diego */
+
+
+
+  /* Estilos Francisco */
+  /* Contenedor principal que alinea todo en un solo eje horizontal */
+.linea-unica-porcentaje {
+    display: inline-flex;
+    align-items: center; 
+    gap: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    margin-top: 10px;
+    background-color: #fafafa;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+/* Evita que MathJax rompa la fila horizontal */
+.formula-teorica {
+    display: inline-block;
+}
+.formula-teorica .mjx-chtml {
+    margin: 0 !important;
+}
+
+.separador-igual {
+    user-select: none;
+}
+
+/* Estructura visual de la fracción interactiva */
+.fraccion-html {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numerador-html {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #333; /* Línea de división */
+}
+
+.denominador-html {
+    padding-top: 4px;
+    font-size: 1rem;
+}
+
+.operador-por {
+    font-size: 1.2rem;
+}
+
+/* Cajas de entrada de datos */
+.linea-unica-porcentaje input {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    width: 85px; 
+}
+
+/* Estado inicial base del botón */
+.boton-resultado {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 6px 16px;
+    background-color: #ffffff;
+    color: #0076a3;
+    border: 2px solid #0076a3;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-resultado:hover {
+    background-color: #0076a3;
+    color: #ffffff;
+}
+
+/* Estado de éxito: se activa cuando el cálculo es válido (Verde) */
+.boton-resultado.exito {
+    background-color: #e6f4ea;
+    color: #137333;
+    border-color: #137333;
+    cursor: default;
+}
+
+/* Estado de error: se activa si faltan datos o son incorrectos (Rojo) */
+.boton-resultado.error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border-color: #c5221f;
+}

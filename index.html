@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
     <input type="checkbox" id="menu-toggle" class="menu-checkbox">
 
     <label for="menu-toggle" class="menu-btn-container" aria-label="Abrir menú de lecciones">
@@ -21,11 +22,16 @@
 
     <label for="menu-toggle" class="menu-overlay"></label>
 
+    
+
     <aside class="sidebar-navigation">
         <div class="sidebar-header">
             <h3>Navegación</h3>
         </div>
+        
+        
         <nav class="sidebar-menu">
+            <label for="menu-toggle" onclick="mostrarSeccion('inicio')">Inicio</label>
             <label for="menu-toggle" onclick="mostrarSeccion('media')">1. Media</label>
             <label for="menu-toggle" onclick="mostrarSeccion('mediana')">2. Mediana</label>
             <label for="menu-toggle" onclick="mostrarSeccion('moda')">3. Moda</label>
@@ -34,20 +40,31 @@
             <label for="menu-toggle" onclick="mostrarSeccion('interpretacion-de-graficos')">6. Interpretación de Gráficos</label>
             <label for="menu-toggle" onclick="mostrarSeccion('analisis-de-datos')">7. Análisis de Datos</label>
             <label for="menu-toggle" onclick="mostrarSeccion('deteccion-basica-de-anomalias')">8. Detección de Anomalías</label>
-            <label for="menu-toggle" onclick="mostrarSeccion('repaso')" class="enlace-repaso">Repaso General</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('repaso')" class="enlace-repaso">Cuestionario de repaso</label>
         </nav>
     </aside>
 
     <header class="main-desktop-header">
        <h1>Temas clave de estadística aplicada</h1>       
     </header>
+    <section id="inicio" class="contenedor-tema activa">
+        <div style="text-align: center; padding: 20px 20px; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">
+                Bienvenido al portal de aprendizaje interactivo. Aquí podrás comprender de forma práctica conceptos estadísticos fundamentales y analizar tendencias reales.
+            </p>
+            
+            <button onclick="mostrarSeccion('media')" style="padding: 14px 28px; font-size: 1.1rem; cursor: pointer; background-color: var(--navy); color: white; border: none; border-radius: var(--radius-sm); font-weight: 600; transition: background 0.2s;">
+                Comenzar Aprendizaje →
+            </button>
+        </div>
+    </section>
+
 
     <section id="media" class="contenedor-tema"> <!-- Diego --> 
         <h2>Media</h2>
         <h3 class="subtitulo-tema">¿Qué es la media y para qué sirve?</h2>
            <p>La media es una medida estadística con la cual se obtiene un valor promedio de un conjunto de datos. 
-            Sirve para encontrar un punto de equilibrio donde los valores altos y 
-            bajos se compensan perfectamente.</p>
+            Sirve para encontrar un punto de equilibrio donde los valores altos y bajos se compensan perfectamente.</p>
         <h3 class="subtitulo-tema">Fórmula</h2>
            \[\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
            <h4>¿Qué significa cada símbolo de la fórmula?</h4>
@@ -88,8 +105,14 @@
         
         
 
-        <h3 class="subtitulo-tema">Calculadora para encontrar la media</h2>
-        <p>...</p>
+        <h3 class="subtitulo-tema">Calculadora para encontrar la media</h3>
+
+<p>Ingresa los números separados por espacios y una coma:</p>
+<textarea id="miInput" placeholder="Ej: 32, 34, 36.3, 35.9, 37"></textarea>
+<br>
+<button onclick="calcularMedia()">Calcular media aritmética</button>
+
+<p id="miResultado"></p>
     </section>
 
     <section id="mediana" class="contenedor-tema"> <!-- Francisco -->
@@ -107,9 +130,82 @@
     <section id="moda" class="contenedor-tema"> <!-- Diego -->
         <h2>Moda</h2>
         <h3 class="subtitulo-tema">¿Qué es la moda y para qué sirve?</h3>
-        <p>La moda estadística es el valor que más se repite dentro de un conjunto de datos. Sirve para identificar 
-            el dato más común o frecuente en un grupo. Se utiliza mucho para analizar preferencias, 
-            comportamientos o tendencias.</p>        
+        <p>Para calcular la moda de un conjunto de datos estadísticos basta con contar 
+            el número de veces que aparece cada dato en la muestra, y el dato más repetido será la moda.</p>      
+        <p>Sirve para definir una distribución estadística, ya que el valor más repetido suele estar por el 
+            centro de la distribución.</p>  
+            
+        <h3 class="subtitulo-tema">Tipos de moda en estadística</h3>
+        <p>
+            <strong>
+                Moda unimodal:
+            </strong>
+            solo hay un valor con el máximo número de repeticiones.
+        </p>
+        <p>
+            <strong>
+                Moda bimodal:
+            </strong>
+             el máximo número de repeticiones se produce en dos valores 
+            diferentes y ambos valores se repiten el mismo número de veces.
+        </p>
+        <p>
+            <strong>
+                Moda multimodal: 
+            </strong> 
+            tres o más valores tienen el mismo número máximo de repeticiones.
+        </p>
+        <h3 class="subtitulo-tema">Ejemplos de moda estadística</h3>
+        <h4>Ejemplo de moda unimodal</h4>
+        <p>¿Cuál es la moda del siguiente conjunto de datos?</p>
+        \[5 \ 4 \ 9 \ 7 \ 2 \ 3 \ 9 \ 6 \ 5 \ 2 \ 5\]
+        <p>Los números están desordenados, por lo que primero los ordenaremos 
+            para que sea más fácil encontrar la moda.</p>
+        \[2 \ 2 \ 3 \ 4 \ 5 \ 5 \ 5 \ 6 \ 7 \ 9 \ 9\]
+        <p>Los números 2 y 9 aparecen dos veces, pero el número 5 está repetido 
+            tres veces. Por lo tanto, la moda de la serie de datos es el número 5.</p>
+            \[Mo=5\]
+        <h4>Ejemplo de moda bimodal</h4>
+        <p>Calcula la moda del siguiente conjunto de datos:</p>
+        \[8 \ 7 \ 0 \ 6 \ 10 \ 9 \ 13 \ 8 \ 0 \ 6 \ 2 \ 6 \ 5 \ 11 \ 10 \ 0 
+        \ 9 \ 8 \ 6 \ 12 \ 3 \ 5 \ 11 \ 1 \ 4 \ 8 \ 10 \ 2 \ 5 \ 7\]
+        <p>Primero ponemos los números en orden:</p>
+        \[0 \ 0 \ 0 \ 1 \ 2 \ 2 \ 3 \ 4 \ 5 \ 5 \ 5 \ 6 \ 6 \ 6 \ 6 \ 7 
+        \ 7 \ 8 \ 8 \ 8 \ 8 \ 9 \ 9 \ 10 \ 10 \ 10 \ 11 \ 11 \ 12 \ 13\]
+        <p>Como puedes comprobar, el número 6 y el número 8 aparecen un total 
+            de cuatro veces, el máximo número de repeticiones. Por lo tanto, 
+            en este caso se trata de una moda bimodal y ambos números son la moda 
+            del conjunto de datos:
+        </p>
+        \[Mo=\{ 6 \ ; \ 8\}\]
+        <h4>Ejemplo de moda multimodal</h4>
+        <p>Halla la moda del siguiente conjunto de datos:</p>
+        \[21 \ 27 \ 32 \ 15 \ 13 \ 20 \ 21 \ 21 \ 25 \ 27 \ 31 \ 30 \ 19 \ 20 \ 16
+         \ 22 \ 19 \ 20 \ 31 \ 18 \ 20 \ 25 \ 26 \ 15 \ 20 \ 31 \ 31 \ 27 \ 16 \ 17
+        \ 31 \ 27 \ 24 \ 23 \ 21 \ 27 \ 29 \ 36 \ 32 \ 30 \ 16 \ 22 \ 15 \ 14 \ 37\]
+        <p>Como hay muchos datos, primero los ordenamos en orden creciente para 
+            que así sea más fácil contarlos:</p>
+        \[13 \ 14 \ 15\ 15\ 15 \ 16 \ 16 \ 16 \ 17 \ 18 \ 19 \ 19 \ 20 \ 20 \ 20
+        \ 20 \ 20 \ 21 \ 21 \ 21\ 21 \ 22 \ 22 \ 23 \ 24 \ 25 \ 25 \ 26 \ 27 \ 27
+         \ 27 \ 27 \ 27 \ 29 \ 30 \ 30 \ 31 \ 31 \ 31 \ 31 \ 31 \ 32 \ 32 \ 36 \ 37\]
+         <p>Los números que más se repiten son el 20, el 27 y el 31, los tres números 
+            están repetidos cinco veces. De modo que la moda de este ejemplo es multimodal.</p>
+            \[Mo=\{ 20 \ ; \ 27 \ ; \ 31\}\]
+
+        <h3 class="subtitulo-tema">Calculadora para encontrar la moda</h3>
+        <p>Ingresa los números separados por espacios y una coma:</p>
+        <textarea id="inputModa" placeholder="Ej: 5, 3, 5, 2, 3, 5, 1"></textarea>
+        <br>
+        <button onclick="calcularModa()">Calcular moda</button>
+        <p id="resultadoModa"></p>
+
+        <h3 class="subtitulo-tema"> Moda para datos agrupados</h3>
+        
+        <p>Cuando tenemos los datos agrupados en forma de intervalos realmente no 
+            sabemos cuántas veces está repetido cada dato, solamente conocemos la 
+            frecuencia de cada intervalo.</p>
+        <p>Por lo tanto, para calcular la moda de unos datos agrupados en intervalos
+             se debe utilizar la siguiente fórmula:</p>
         <h3 class="subtitulo-tema">Fórmula</h3>
         <p>\[Mo = L_i + \frac{f_i - f_{i-1}}{(f_i - f_{i-1}) + (f_i - f_{i+1})}\cdot A_i\]</p>
         <h4>¿Qué significa cada símbolo de la fórmula?</h4>
@@ -153,8 +249,22 @@
         <p>\[Mo = 26\]</p>
         <p>Esto significa que el número más frecuente de casos de femicidios 
             entre las provincias analizadas se encuentra alrededor de 26 casos.</p>
-        <h3 class="subtitulo-tema">Calculadora para encontrar la moda</h3>
-        <p>...</p>
+        
+    
+        <h3 class="subtitulo-tema">Calculadora para la moda agrupada</h3>
+        <p>Límite inferior del intervalo modal (Li):</p>
+        <input type="number" id="inputLi" placeholder="Ej: 20">
+        <p>Frecuencia de la clase modal (fi):</p>
+        <input type="number" id="inputFi" placeholder="Ej: 3">
+        <p>Frecuencia de la clase anterior (fi-1):</p>
+        <input type="number" id="inputFiAnterior" placeholder="Ej: 0">
+        <p>Frecuencia de la clase siguiente (fi+1):</p>
+        <input type="number" id="inputFiSiguiente" placeholder="Ej: 1">
+        <p>Amplitud del intervalo (Ai):</p>
+        <input type="number" id="inputAi" placeholder="Ej: 10">
+        <br><br>
+        <button onclick="calcularModaAgrupada()">Calcular moda agrupada</button>
+        <p id="resultadoModaAgrupada"></p>
     </section>
 
     <section id="porcentaje" class="contenedor-tema"> <!-- Francisco -->
@@ -176,28 +286,72 @@
            Permite identificar si algo aumenta, disminuye o se mantiene estable. Sirve para analizar cambios en el tiempo, 
            predecir comportamientos futuros y tomar decisiones basadas en datos.</p>
         <h3 class="subtitulo-tema">Fórmula</h3>
-        <p>\[T = \frac{Y_2 - Y_1}{X_2 - X_1}\]</p>
-        <h4>¿Qué significa cada componente?</h4>
-        <p>T = Tasa de cambio o pendiente</p>
-        <p>Y1 = Primer valor de Y</p>
-        <p>Y2 = Segundo valor de Y</p>
-        <p>X1 = Primer valor de X</p>
-        <p>X2 = Segundo valor de X</p>
+        \[{MM_t} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
+        <h4>¿Qué significa cada símbolo de la fórmula?</h4>
+        <p>
+            <strong>
+                MM<sub>t</sub> =
+            </strong> 
+            Resultado promedio en el período t.
+        </p>
+        <p>
+            <strong>
+                t =
+            </strong> 
+            Período de tiempo actual.
+        </p>
+        <p>
+            <strong>
+        
+                X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>n</sub> =
+
+            </strong> 
+            Valores observados en cada período.
+        </p>
+        <p>
+            <strong>
+                n =
+            </strong> 
+            Número de períodos incluidos.
+        </p>
+        
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <h4>Tema: Incremento de homicidios en Ecuador</h4>
+        <h4>Tema: Indice de precios al consumidor</h4>
         <img src="tendenciaImg.png"></img>
-        <h4>1. Identificar los valores</h4>
-        <p>\[\begin{aligned}Y_2 &= 8008 \\Y_1 &= 2495 \\X_2 &= 2023 \\X_1 &= 2021\end{aligned}\]</p>
-        <h4>2. Reemplazar en la fórmula</h4>
-        <p>\[T = \frac{8008 - 2495}{2023 - 2021}\]</p>
-        <h4>3. Resolver</h4>
-        <p>\[T = \frac{5513}{2}\]\[T = 2756.5\]</p>
-        <h4>4. Resultado</h4>
-        <p>\[T = 2756.5\]</p>
-        <p>Esto significa que en Ecuador hubo un aumento promedio de aproximadamente 2757 homicidios 
-            por año entre 2021 y 2023, mostrando una tendencia creciente de violencia.</p>
-        <h3 class="subtitulo-tema">Calculadora para encontrar tendencias</h3>
-        <p>...</p>
+        <h4>1. Media Móvil de 3 períodos (últimos 3 años)</h4>
+        \[MM = \frac{0.27+1.27+0.20}{3} = \frac{1.74}{3} = 0.58\]
+        
+        <h4>2. Promedio total de todos los valores</h4>
+        <p>\[\bar{x} = \frac{0.30+0.84+0.31+0.43−0.14+0.17+1.00+0.35+0.59+0.20+1.27+0.27+0.53}{13} = 0.49\]</p>
+        <h4>3. Interpretación</h4>
+        <p> La tendencia general es moderadamente positiva, 
+            con picos en 2020 y 2024.</p>
+        <h3 class="subtitulo-tema">Calculadora para encontrar la tendencia</h3>
+       
+        <p>Ingresa tus datos históricos ordenados cronológicamente, separados por comas:</p>
+
+        <textarea id="inputDatosTendencia" placeholder="Ej: 2495, 5826, 8008, 9200"></textarea>
+        <br>
+        <button onclick="calcularTendencia()">Analizar Tendencia</button>
+        
+
+        <div class="calc-tendencia" id="contenedorResultadosBásicos" style="display:none; margin-top: 20px;">
+  <div class="tend-stats">
+    <div class="tend-stat">
+      <div class="tend-stat-label">Primer Dato vs Último</div>
+      <div class="tend-stat-valor" id="base-tasa">—</div>
+    </div>
+    <div class="tend-stat">
+      <div class="tend-stat-label">Promedio General</div>
+      <div class="tend-stat-valor" id="base-promedio">—</div>
+    </div>
+    <div class="tend-stat">
+      <div class="tend-stat-label">Dirección General</div>
+      <div class="tend-stat-valor" id="base-direccion" style="font-size: 1.1rem;">—</div>
+    </div>
+  </div>
+  <p id="base-interpretacion" style="font-size: 0.95rem; color: var(--text-body); background: var(--cream); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--sand);"></p>
+</div>
     </section>
 
     <section id="interpretacion-de-graficos" class="contenedor-tema"> <!-- Francisco -->
@@ -214,17 +368,40 @@
     <section id="analisis-de-datos" class="contenedor-tema"> <!-- Diego -->
         <h2>Análisis de datos</h2>
         <h3 class="subtitulo-tema">¿Qué es el análisis de datos y para qué sirve?</h3>
-        <p>El análisis de datos es el proceso de examinar, limpiar, transformar y modelar datos con el 
-            objetivo de descubrir información útil, llegar a conclusiones y apoyar la toma de decisiones. 
-            Sirve para tomar decisiones estratégicas basadas en el comportamiento de los clientes, optimizar
-            las operaciones reduciendo costos e ineficiencias, e impulsar la innovación mediante productos
-            y servicios personalizados según las necesidades del usuario.</p>
-        <h3 class="subtitulo-tema">Ejemplo de un análisis de datos</h3>  \\adaptar este apartado
+        <p>El análisis de datos se ha convertido en un pilar esencial en la toma de decisiones efectiva, 
+            tanto en el ámbito empresarial como en la investigación. Sirve para el proceso de inspeccionar, limpiar, transformar y 
+            modelar grandes volúmenes de datos con el objetivo de descubrir información útil, llegar a conclusiones 
+            y respaldar la toma de decisiones. </p>
+        <h3 class="subtitulo-tema">Ejemplo de un análisis de datos</h3>  
         <h4>Tema: Canasta familiar vital en Ecuador</h4>
+        <p>La gráfica presentada muestra el valor de la Canasta Familiar Vital en distintas ciudades del Ecuador durante 
+            abril de 2026, así como el ingreso familiar mensual promedio. El valor nacional de la canasta se ubicó 
+            en 575 dólares, mientras que el ingreso familiar mensual fue aproximadamente de 638 dólares.</p>
         <img src="canastaVitalImg.png"></img>
-        <P>Para realizar una evualuación sobre el costo de la canasta vital siguiendo INEC-2026,  </P>
-        <h3 class="subtitulo-tema">Ejercicio</h3>
-        <p>...</p>
+        <P>Al analizar la información de la Canasta Familiar Vital de abril de 2026, se observa que el valor nacional 
+            fue de 575 dólares. Sin embargo, existen diferencias entre ciudades. La canasta más costosa se registró 
+            en Manta con 638 dólares, seguida de Quito con 603 dólares y Machala con 593 dólares. Por el contrario, 
+            las ciudades con los valores más bajos fueron Santo Domingo con 533 dólares, Ambato con 544 dólares y 
+            Esmeraldas con 548 dólares.</P>
+            <p>
+                También se observa que el ingreso familiar mensual promedio fue de aproximadamente 638 dólares,
+                 lo que permite cubrir el costo de la canasta familiar en la mayoría de las ciudades. 
+                 No obstante, en Manta el ingreso promedio prácticamente coincide con el valor de la canasta, 
+                 por lo que las familias tendrían menos recursos disponibles para otros gastos.
+            </p>
+            <p>
+                Estos datos muestran que el costo de vida varía según la ciudad y que algunas familias 
+                necesitan destinar una mayor parte de sus ingresos para cubrir sus necesidades básicas.
+            </p>
+            <h4>Conclusiones</h4>
+            <p>- La Canasta Familiar Vital presentó diferencias entre las ciudades del Ecuador durante abril de 2026.</p>
+            <p>- Manta fue la ciudad con el mayor costo de la canasta familiar, mientras que Santo Domingo registró el menor valor.</p>
+            <p>- El ingreso familiar promedio permite cubrir la canasta familiar a nivel nacional.</p>
+            <p>- El análisis de datos facilita la comparación de información y ayuda a comprender mejor la realidad económica de las 
+                familias ecuatorianas.</p>
+            <p>- A partir de los datos analizados se pueden obtener conclusiones útiles para la toma de decisiones y 
+                la evaluación de la calidad de vida de la población.</p>
+
     </section>
 
     <section id="deteccion-basica-de-anomalias" class="contenedor-tema"> <!-- Francisco -->
@@ -239,13 +416,18 @@
     </section>
 
     <section id="repaso" class="contenedor-tema-repaso">
-        <h2>Repaso</h2>
-        <p>...</p>      
+        <h3 class="subtitulo-tema">Cuestionario de repaso</h3>
+        <button onclick="iniciarCuestionario()">Comenzar cuestionario</button>
+        <div id="cuestionario"></div>
+        <p id="resultadoCuestionario"></p>  
+        
     </section>
 
     <footer>
         Creado por Francisco Rodríguez y Diego Chicaiza
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
    
 </body>
 

@@ -362,7 +362,7 @@ section p {
   font-size: .98rem;
   line-height: 1.82;
   margin-bottom: 14px;
-  max-width: 72ch;
+  max-width: 100%;
 }
 
 /* Párrafos que contienen fórmulas LaTeX renderizadas */
@@ -499,4 +499,165 @@ footer {
   section img {
     max-height: 280px;
   }
+}
+/* ── Calculadora de Media ───────────────────────────────────── */
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--sand);
+    border-radius: var(--radius-sm);
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 5px 28px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--navy-mid);
+}
+
+#miResultado {
+    margin-top: 16px;
+    font-size: 1rem;
+    color: var(--navy);
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 2px solid var(--sand);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    background: var(--white);
+    color: var(--text-main);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--navy-light);
+}
+
+.calc-tendencia {
+  margin-top: 20px;
+}
+ 
+.tend-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+ 
+.tend-stat {
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  text-align: center;
+}
+ 
+.tend-stat-label {
+  font-size: .75rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: .05em;
+}
+ 
+.tend-stat-valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+ 
+.tend-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+ 
+.tend-slider-row input[type=range] {
+  flex: 1;
+  accent-color: var(--navy);
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin-bottom: 0;
+}
+ 
+.tend-slider-row span {
+  font-weight: 700;
+  color: var(--navy);
+  min-width: 18px;
+}
+ 
+.tend-chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  margin-bottom: 10px;
+}
+ 
+.tend-leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+ 
+.tend-leyenda span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+ 
+.tend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+ 
+.tend-swatch-dash {
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed;
+  display: inline-block;
+  vertical-align: middle;
+}
+ 
+.tend-agregar {
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  margin-top: 8px;
+}
+ 
+.tend-agregar-fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+ 
+.tend-agregar-fila input[type="number"] {
+  width: 160px;
+  margin-bottom: 0;
 }

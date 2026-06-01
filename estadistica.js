@@ -471,6 +471,107 @@ let preguntas = [
         opciones: ["La muestra máxima del intervalo absoluto.", "El resultado promedio (Media Móvil) en el período de tiempo actual t.", "La mediana multiplicada por el tiempo total.", "La moda absoluta del período inicial."],
         correcta: 1
     },
+
+    {
+        pregunta: "Los ingresos mensuales de 10 familias ordenados de menor a mayor son: $300, $320, $350, $390, $420, $480, $500, $520, $600, $850. ¿Cuál es el valor exacto de la mediana?",
+        opciones: [
+            "Es $420, porque es el último valor de la primera mitad de los datos.",
+            "Es $450, ya que al ser un número par de datos (n=10), se promedian los dos valores centrales ($420 y $480).",
+            "Es $483, porque corresponde al promedio aritmético simple de todos los ingresos de la muestra.",
+            "Es $550, porque es el punto medio exacto entre el ingreso más bajo y el más alto."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "Se registran las notas de 7 estudiantes en un examen: 12, 15, 18, 14, 11, 20 y 19. Si ordenamos los datos de menor a mayor para aplicar la fórmula de cantidad impar (n=7), ¿cuál es el valor de la mediana?",
+        opciones: [
+            "Es 14, porque al dividir el total de datos para dos (7 / 2) da 3.5 y se redondea hacia abajo.",
+            "Es 15, porque una vez ordenados los datos (11, 12, 14, 15, 18, 19, 20), el número 15 ocupa la posición central exacta.",
+            "Es 15.5, porque corresponde al promedio de los dos números que quedan en los extremos.",
+            "Es 18, porque es la nota que se encuentra justo en la mitad del listado original sin ordenar."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "Un analista calcula la mediana de una lista ordenada de 8 datos (n es par). ¿Cómo obtiene el sistema el valor final de la mediana?",
+        opciones: [
+            "Toma directamente el dato que se encuentra en la posición número 4.",
+            "Suma el dato de la posición 4 y el de la posición 5, y calcula su promedio.",
+            "Divide el total de datos para dos y toma el número entero más cercano.",
+            "Busca el dato que más veces se repite entre las posiciones centrales."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Cuáles son las definiciones conceptuales correctas de la Media aritmética y de la Mediana dentro del análisis estadístico?",
+        opciones: [
+            "La Media es la tasa de variación porcentual acumulada de la muestra, mientras que la Mediana es la diferencia absoluta entre el valor máximo y el mínimo.",
+            "La Media es el valor promedio que se obtiene al dividir la suma de todos los datos para el número total de elementos, mientras que la Mediana es el valor que ocupa la posición central en un conjunto de datos ordenados.",
+            "La Media es el dato que registra la mayor frecuencia absoluta en la distribución, mientras que la Mediana es la representación geométrica de los intervalos de clase.",
+            "La Media es el límite inferior del primer cuartil de la muestra, mientras que la Mediana es el resultado de multiplicar la varianza por el total de datos (n)."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "Un artículo que costaba $80 sube un 25% de precio. Semanas después, el nuevo precio baja un 25%. ¿Cuál es el valor resultante final?",
+        opciones: [
+            "Sigue costando $80, porque el aumento del 25% y la baja del 25% se anulan entre sí.",
+            "Cuesta $75, porque el 25% de descuento se calcula sobre el nuevo precio de $100, restando $25 al total.",
+            "Cuesta $60, porque se resta el porcentaje directamente del valor inicial de fábrica.",
+            "Cuesta $105 debido a los impuestos acumulados por el cambio de precios."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "Un pantalón de $50 tiene el 10% de descuento directo en la etiqueta. Al pagar en caja, aplican un 10% de descuento adicional sobre el valor ya rebajado. ¿Cuánto terminas pagando en total?",
+        opciones: [
+            "Pagas $40, porque los dos descuentos se suman directamente dando un 20% en total.",
+            "Pagas $40.50, porque el primer descuento deja el pantalón en $45, y el segundo descuento del 10% te resta $4.50 adicionales.",
+            "Pagas $42.50, porque el segundo descuento solo aplica a la mitad del precio original.",
+            "Pagas $45, porque las políticas de la tienda impiden acumular dos promociones seguidas."
+        ],
+        correcta: 1
+    },   
+    {
+        pregunta: "Al observar un gráfico de líneas que muestra las ventas de una tienda, notas que la línea sube en unos meses y baja en otros, pero al mirar el año completo la línea empezó en $2,000 y terminó en $5,500. ¿Qué describe este comportamiento?",
+        opciones: [
+            "Una tendencia decreciente con alta estabilidad.",
+            "Una tendencia creciente, a pesar de presentar variaciones o fluctuaciones en cortos periodos de tiempo.",
+            "Un error absoluto en la recolección de los datos mensuales.",
+            "Una distribución perfectamente simétrica donde la media y la moda coinciden."
+        ],
+        correcta: 1
+    },     
+    {
+        pregunta: "Estás analizando el registro de temperatura diaria de un refrigerador médico que siempre marca entre 2°C y 4°C. De repente, el día martes registra 18°C. ¿Cómo se clasifica estadísticamente este valor?",
+        opciones: [
+            "Es un promedio móvil estándar del periodo analizado.",
+            "Es una anomalía o valor atípico (outlier) que requiere investigación inmediata para comprobar errores o fallas.",
+            "Es la moda de la semana porque representa el cambio más visible.",
+            "Es una tendencia neutral estable de la serie cronológica."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "Si en un conjunto de datos encuentras una anomalía (valor atípico), ¿cuál debería ser el primer paso antes de decidir eliminarla del análisis?",
+        opciones: [
+            "Borrarla de inmediato para que la media aritmética no sufra alteraciones.",
+            "Verificar el origen del dato para identificar si se trata de un error de digitación, una falla de medición o un evento real extraordinario.",
+            "Cambiar su valor por el de la mediana para forzar la simetría del grupo.",
+            "Duplicar los demás datos para restar importancia a la anomalía."
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Por qué las anomalías o valores atípicos extremos representan un riesgo al calcular únicamente la media aritmética de un estudio?",
+        opciones: [
+            "Porque causan que el sistema divida para cero automáticamente.",
+            "Porque la media es muy sensible a los valores extremos y un solo dato anómalo puede distorsionar el promedio, dando una falsa representación de la realidad.",
+            "Porque eliminan las frecuencias absolutas de los intervalos agrupados.",
+            "Porque obligan a que el resultado final sea un número entero negativo."
+        ],
+        correcta: 1
+    }
     
 ];
 

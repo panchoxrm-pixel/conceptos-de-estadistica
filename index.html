@@ -37,9 +37,9 @@
             <label for="menu-toggle" onclick="mostrarSeccion('moda')">3. Moda</label>
             <label for="menu-toggle" onclick="mostrarSeccion('porcentaje')">4. Porcentaje</label>
             <label for="menu-toggle" onclick="mostrarSeccion('tendencia')">5. Tendencia</label>
-            <label for="menu-toggle" onclick="mostrarSeccion('interpretacion-de-graficos')">6. Interpretación de Gráficos</label>
-            <label for="menu-toggle" onclick="mostrarSeccion('analisis-de-datos')">7. Análisis de Datos</label>
-            <label for="menu-toggle" onclick="mostrarSeccion('deteccion-basica-de-anomalias')">8. Detección de Anomalías</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('interpretacion-de-graficos')">6. Interpretación de gráficos</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('analisis-de-datos')">7. Análisis de datos</label>
+            <label for="menu-toggle" onclick="mostrarSeccion('deteccion-basica-de-anomalias')">8. Detección de anomalías</label>
             <label for="menu-toggle" onclick="mostrarSeccion('repaso')" class="enlace-repaso">Cuestionario de repaso</label>
         </nav>
     </aside>
@@ -50,11 +50,11 @@
     <section id="inicio" class="contenedor-tema activa">
         <div style="text-align: center; padding: 20px 20px; max-width: 800px; margin: 0 auto;">
             <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">
-                Bienvenido al portal de aprendizaje interactivo. Aquí podrás comprender de forma práctica conceptos estadísticos fundamentales y analizar tendencias reales.
+                Bienvenido al portal de aprendizaje interactivo. Aquí podrás comprender de forma práctica conceptos estadísticos fundamentales y analizar datos reales.
             </p>
             
             <button onclick="mostrarSeccion('media')" style="padding: 14px 28px; font-size: 1.1rem; cursor: pointer; background-color: var(--navy); color: white; border: none; border-radius: var(--radius-sm); font-weight: 600; transition: background 0.2s;">
-                Comenzar Aprendizaje →
+                Comenzar aprendizaje →
             </button>
         </div>
     </section>
@@ -62,16 +62,16 @@
 
     <section id="media" class="contenedor-tema"> <!-- Diego --> 
         <h2>Media</h2>
-        <h3 class="subtitulo-tema">¿Qué es la media y para qué sirve?</h2>
+        <h3 class="subtitulo-tema">¿Qué es la media y para qué sirve?</h3>
            <p>La media es una medida estadística con la cual se obtiene un valor promedio de un conjunto de datos. 
             Sirve para encontrar un punto de equilibrio donde los valores altos y bajos se compensan perfectamente.</p>
-        <h3 class="subtitulo-tema">Fórmula</h2>
+        <h3 class="subtitulo-tema">Fórmula</h3>
            \[\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
            <h4>¿Qué significa cada símbolo de la fórmula?</h4>
-           <p>\(\bar{x}\) = Media aritmética o promedio</p>  //arreglar
-           <p>x1,x2,x3,…,xn = Valores o datos del conjunto</p>
+           <div class="formula-teorica">\( \overline{x} \) = Media aritmética o promedio</div>
+           <p>x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,…,x<sub>n</sub> = Valores o datos del conjunto</p>
            <p>n = Cantidad total de datos</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h2>
+        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Tasa de empleo adecuado</h4>
         <h4>1. Identificar la cantidad de valores</h4>
         <table>
@@ -102,8 +102,6 @@
         <h4>3. Dividir la suma total para la cantidad</h4>
         \[\bar{x} = \frac{176,2}{5} = 35,24\]
         
-        
-        
 
         <h3 class="subtitulo-tema">Calculadora para encontrar la media</h3>
 
@@ -117,15 +115,134 @@
 
     <section id="mediana" class="contenedor-tema"> <!-- Francisco -->
         <h2>Mediana</h2>
-        <h3 class="subtitulo-tema">¿Qué es la mediana y para qué sirve?</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Fórmula</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h2>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h2>
-        <p>...</p>
+        <h3 class="subtitulo-tema">¿Qué es la mediana y para qué sirve?</h3>
+            <p>
+                Es el número que queda justo en el centro de una lista de datos ordenados de menor a mayor.
+                Sirve para evitar que los valores atípicos (muy bajos o muy altos) distorsionen la 
+                realidad de los datos, algo que sí ocurre fácilmente con el promedio.
+            </p>
+        <h3 class="subtitulo-tema">Fórmulas</h3>                              
+            <p>Cuando la cantidad de valores es impar, la mediana es el valor central:</p> 
+            <p>$$\tilde{x} = x_{\left(\frac{n + 1}{2}\right)}$$</p>             
+            <p>Cuando la cantidad de valores es par, la mediana es el promedio de los 2 valores centrales:</p> 
+            <p>$$\tilde{x} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$</p>
+            <div class="glosario-formulas">
+    <h4>¿Qué significa cada símbolo de las fórmulas?</h4>
+    <ul>
+        <li><strong>\(\tilde{x}\)</strong> : Es el símbolo de la mediana.</li>
+        <li><strong>\(x\)</strong> : Representa los datos ordenados de menor a mayor (y con un subíndice, representa un dato específico).</li>
+        <li><strong>\(n\)</strong> : Indica la cantidad total de datos.</li>
+        <li><strong>Subíndices entre paréntesis —como \(x_{(4)}\)—</strong> : Señalan la posición exacta que ocupa el dato dentro de la lista.</li>
+    </ul> 
+            </div>
+            <h3 class="subtitulo-tema">Ejemplos reales paso a paso</h3>
+            <h4>Tema 1: El costo de la canasta familiar básica en ciudades de la Costa ecuatoriana, en abril 2026</h4>
+            <h4>Paso 1. Ordenar los datos de menor a mayor.</h4>
+            <p>Al colocar de menor a mayor los costos de la canasta reportados por el INEC de las ciudades que monitorea, obtenemos lo siguiente: </p>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Santo Domingo</th>
+                        <th>Esmeraldas</th>
+                        <th>Machala</th>
+                        <th>Guayaquil</th>
+                        <th>Manta</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Costo</th>
+                            <td>$ 773,71</td>
+                            <td>$ 797,02</td>
+                            <td>$ 804,07</td>
+                            <td>$ 843,25</td>
+                            <td>$ 854,83</td>
+                        </tr>
+                        <tr>
+                            <th>Posición del dato en la lista</th>
+                            <td>\(x_{(1)}\)</td>
+                            <td>\(x_{(2)}\)</td>
+                            <td>\(x_{(3)}\)</td>
+                            <td>\(x_{(4)}\)</td>
+                            <td>\(x_{(5)}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h4>Paso 2. Contar el total de los datos e identificar si es par o impar.</h4>
+                <p>La muestra consta de 5 datos; por lo tanto, la cantidad es impar.</p>
+            <h4>Paso 3. Escoger la fórmula correspondiente a impar.</h4>
+                <p>$$\tilde{x} = x_{\left(\frac{n + 1}{2}\right)}$$</p>
+            <h4>Paso 4. Calcular la posición del valor central a partir de la cantidad de datos.</h4>
+                <p>$$\tilde{x} = x_{\left(\frac{5 + 1}{2}\right)} = x_{(3)}$$</p>
+            <h4>Paso 5. Identificar el valor del dato central, el que queda justo en medio de la lista. El resultado es la mediana.</h4>
+                <p>$$\tilde{x} = $ 804,07$$</p>
+            <h4></h4>
+
+            <h4>Tema 2: El costo de la canasta familiar básica en ciudades de la Sierra ecuatoriana, en abril 2026</h4>
+            <h4>Paso 1. Ordenar los datos de menor a mayor.</h4>
+            <p>Al colocar de menor a mayor los costos de la canasta reportados por el INEC de las ciudades que monitorea, obtenemos lo siguiente: </p>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Ambato</th>
+                        <th>Loja</th>
+                        <th>Quito</th>
+                        <th>Cuenca</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Costo</th>
+                            <td>$ 807,43</td>
+                            <td>$ 827,70</td>
+                            <td>$ 865,22</td>
+                            <td>$ 873,14</td>
+                        </tr>
+                        <tr>
+                            <th>Posición del dato en la lista</th>
+                            <td>\(x_{(1)}\)</td>
+                            <td>\(x_{(2)}\)</td>
+                            <td>\(x_{(3)}\)</td>
+                            <td>\(x_{(4)}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h4>Paso 2. Contar el total de los datos e identificar si es par o impar.</h4>
+                <p>La muestra consta de 4 datos; por lo tanto, la cantidad es par.</p>
+            <h4>Paso 3. Escoger la fórmula correspondiente a par.</h4>
+                <p>$$\tilde{x} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2}$$</p>
+            <h4>Paso 4. Calcular la posición de los 2 valores centrales a partir de la cantidad de datos.</h4>
+                <p>
+                    $$\tilde{x} = \frac{x_{\left(\frac{4}{2}\right)} + x_{\left(\frac{4}{2} + 1\right)}}{2} = 
+                    \frac{x_{(2)} + x_{(3)}}{2}$$
+                </p>
+            <h4>Paso 5. Identificar los valores de los 2 datos centrales y promediarlos. El resultado es la mediana.</h4>
+                <p>$$\tilde{x} = \frac{827,70 + 865,22}{2} = $ 846.46$$</p>
+            
+            <h3 class="subtitulo-tema">Calculadora para encontrar la mediana</h3>
+
+                <p>
+                    A continuación, puedes calcular la mediana de la lista de valores que ingreses:
+                </p>
+
+                <p>
+                    Ingresa un valor en cada línea:
+                </p>
+
+                <textarea id="datos-mediana" rows="8" cols="15" placeholder="24, 26, 25, 28, 27, 24, 0, 26, 1" oninput="validarEntradaMediana(this)"></textarea>
+
+                <br><br>
+
+                <button onclick="calcularMediana()">
+                    Calcular
+                </button>
+
+                <p id="error-mediana"></p>
+
+                <p id="datos-ordenados"></p>
+
+                <p id="formula-mediana"></p>                        
+        
     </section>
+
 
     <section id="moda" class="contenedor-tema"> <!-- Diego -->
         <h2>Moda</h2>
@@ -158,20 +275,22 @@
         <h3 class="subtitulo-tema">Ejemplos de moda estadística</h3>
         <h4>Ejemplo de moda unimodal</h4>
         <p>¿Cuál es la moda del siguiente conjunto de datos?</p>
-        \[5 \ 4 \ 9 \ 7 \ 2 \ 3 \ 9 \ 6 \ 5 \ 2 \ 5\]
+        \[5 \ ; \ 4 \ ; \ 9 \ ; \ 7 \ ; \ 2 \ ; \ 3 \ ; \ 9 \ ; \ 6 \ ; \ 5 \ ; \ 2 \ ; \ 5\]
         <p>Los números están desordenados, por lo que primero los ordenaremos 
             para que sea más fácil encontrar la moda.</p>
-        \[2 \ 2 \ 3 \ 4 \ 5 \ 5 \ 5 \ 6 \ 7 \ 9 \ 9\]
+        \[2 \ ; \ 2 \ ; \ 3 \ ; \ 4 \ ; \ 5 \ ; \ 5 \ ; \ 5 \ ; \ 6 \ ; \ 7 \ ; \ 9 \ ; \ 9\]
         <p>Los números 2 y 9 aparecen dos veces, pero el número 5 está repetido 
             tres veces. Por lo tanto, la moda de la serie de datos es el número 5.</p>
             \[Mo=5\]
         <h4>Ejemplo de moda bimodal</h4>
         <p>Calcula la moda del siguiente conjunto de datos:</p>
-        \[8 \ 7 \ 0 \ 6 \ 10 \ 9 \ 13 \ 8 \ 0 \ 6 \ 2 \ 6 \ 5 \ 11 \ 10 \ 0 
-        \ 9 \ 8 \ 6 \ 12 \ 3 \ 5 \ 11 \ 1 \ 4 \ 8 \ 10 \ 2 \ 5 \ 7\]
+        \[8 \ ; \ 7 \ ; \ 0 \ ; \ 6 \ ; \ 10 \ ; \ 9 \ ; \ 13 \ ; \ 8 \ ; \ 0 \ ;
+        \ 6 \ ; \ 2 \ ; \ 6 \ ; \ 5 \ ; \ 11 \ ; \ 10 \ ; \ 0 \ ; \ 9 \ ; \ 8 \ ; \ 6 \ ; 
+        \ 12 \ ; \ 3 \ ; \ 5 \ ; \ 11 \ ; \ 1 \ ; \ 4 \ ; \ 8 \ ; \ 10 \ ; \ 2 \ ; \ 5 \ ; \ 7\]
         <p>Primero ponemos los números en orden:</p>
-        \[0 \ 0 \ 0 \ 1 \ 2 \ 2 \ 3 \ 4 \ 5 \ 5 \ 5 \ 6 \ 6 \ 6 \ 6 \ 7 
-        \ 7 \ 8 \ 8 \ 8 \ 8 \ 9 \ 9 \ 10 \ 10 \ 10 \ 11 \ 11 \ 12 \ 13\]
+        \[0 \ ; \ 0 \ ; \ 0 \ ; \ 1 \ ; \ 2 \ ; \ 2 \ ; \ 3 \ ; \ 4 \ ; \ 5 \ ; \ 5 \ ; \ 5 \ ; \ 6 \ ; \ 6 \ ; 
+        \ 6 \ ; \ 6 \ ; \ 7 \ ; \ 7 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 9 \ ; \ 9 \ ; \ 10 \ ; \ 10 \ ; \ 10 \ ; 
+        \ 11 \ ; \ 11 \ ; \ 12 \ ; \ 13\]
         <p>Como puedes comprobar, el número 6 y el número 8 aparecen un total 
             de cuatro veces, el máximo número de repeticiones. Por lo tanto, 
             en este caso se trata de una moda bimodal y ambos números son la moda 
@@ -180,14 +299,16 @@
         \[Mo=\{ 6 \ ; \ 8\}\]
         <h4>Ejemplo de moda multimodal</h4>
         <p>Halla la moda del siguiente conjunto de datos:</p>
-        \[21 \ 27 \ 32 \ 15 \ 13 \ 20 \ 21 \ 21 \ 25 \ 27 \ 31 \ 30 \ 19 \ 20 \ 16
-         \ 22 \ 19 \ 20 \ 31 \ 18 \ 20 \ 25 \ 26 \ 15 \ 20 \ 31 \ 31 \ 27 \ 16 \ 17
-        \ 31 \ 27 \ 24 \ 23 \ 21 \ 27 \ 29 \ 36 \ 32 \ 30 \ 16 \ 22 \ 15 \ 14 \ 37\]
+        \[21 \ ; \ 27 \ ; \ 32 \ ; \ 15 \ ; \ 13 \ ; \ 20 \ ; \ 21 \ ; \ 21 \ ; \ 25 \ ; \ 27 \ ; \ 31 \ ; \ 30 \ ; \ 19 \ ; 
+        \ 20 \ ; \ 16 \ ; \ 22 \ ; \ 19 \ ; \ 20 \ ; \ 31 \ ; \ 18 \ ; \ 20 \ ; \ 25 \ ; \ 26 \ ; \ 15 \ ; \ 20 \ ; \ 31 \ ; 
+        \ 31 \ ; \ 27 \ ; \ 16 \ ; \ 17 \ ; \ 31 \ ; \ 27 \ ; \ 24 \ ; \ 23 \ ; \ 21 \ ; \ 27 \ ; \ 29 \ ; \ 36 \ ; \ 32 \ ; 
+        \ 30 \ ; \ 16 \ ; \ 22 \ ; \ 15 \ ; \ 14 \ ; \ 37\]
         <p>Como hay muchos datos, primero los ordenamos en orden creciente para 
             que así sea más fácil contarlos:</p>
-        \[13 \ 14 \ 15\ 15\ 15 \ 16 \ 16 \ 16 \ 17 \ 18 \ 19 \ 19 \ 20 \ 20 \ 20
-        \ 20 \ 20 \ 21 \ 21 \ 21\ 21 \ 22 \ 22 \ 23 \ 24 \ 25 \ 25 \ 26 \ 27 \ 27
-         \ 27 \ 27 \ 27 \ 29 \ 30 \ 30 \ 31 \ 31 \ 31 \ 31 \ 31 \ 32 \ 32 \ 36 \ 37\]
+        \[13 \ ; \ 14 \ ; \ 15 \ ; \ 15 \ ; \ 15 \ ; \ 16 \ ; \ 16 \ ; \ 16 \ ; \ 17 \ ; \ 18 \ ; \ 19 \ ; \ 19 \ ; \ 20 \ ; 
+        \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 21 \ ; \ 21 \ ; \ 21 \ ; \ 21 \ ; \ 22 \ ; \ 22 \ ; \ 23 \ ; \ 24 \ ; \ 25 \ ; 
+        \ 25 \ ; \ 26 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 29 \ ; \ 30 \ ; \ 30 \ ; \ 31 \ ; \ 31 \ ; \ 31 \ ; 
+        \ 31 \ ; \ 31 \ ; \ 32 \ ; \ 32 \ ; \ 36 \ ; \ 37\]
          <p>Los números que más se repiten son el 20, el 27 y el 31, los tres números 
             están repetidos cinco veces. De modo que la moda de este ejemplo es multimodal.</p>
             \[Mo=\{ 20 \ ; \ 27 \ ; \ 31\}\]
@@ -216,7 +337,7 @@
         <p>Ai = Amplitud del intervalo</p>
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Femicidios en Ecuador (2024)</h4>
-        <img src="modaImagen.png"></img>
+        <img src="modaImagen.png">
         <h4>1. Agrupar los datos</h4>
         <table>
             <thead>
@@ -270,14 +391,135 @@
     <section id="porcentaje" class="contenedor-tema"> <!-- Francisco -->
         <h2>Porcentaje</h2>
         <h3 class="subtitulo-tema">¿Qué es el porcentaje y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Fórmula</h3>
-        <p>...</p>        
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>       
+        <p>
+            Es una forma de expresar una cantidad como una fracción de 100 partes iguales, usando el símbolo %. 
+            Sirve para comparar datos de manera sencilla, estandarizar mediciones y mostrar cambios con claridad
+            en diversos asuntos como descuentos comerciales, estadísticas demográficas, tasas de interés financieras, etc. </p>
+        <h3 class="subtitulo-tema">Fórmulas</h3>
+            <p>Para calcular la parte, cuando se conoce el porcentaje y el total:</p>
+            <p>\[ Parte = \frac{Porcentaje \times Total}{100} \]</p>
+            <p>Para calcular el porcentaje, cuando se conoce la parte y el total:</p>
+            <p>\[ Porcentaje = \frac{Parte \times 100}{Total} \]</p> 
+            <p>Para calcular el total, cuando se conoce la parte y el porcentaje:</p>
+            <p>\[ Total = \frac{Parte \times 100}{Porcentaje} \]</p>  
+                 
+        <h3 class="subtitulo-tema">Ejemplos reales paso a paso</h3>
+        
+        <h4>Tema 1. Provincias de la región de la Amazonía</h4>
+            <p>¿Cuántas provincias son amazónicas si juntas corresponden al 25 % de las 24 provincias que conforman el Ecuador?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Porcentaje: 25</p>
+            <p>Total: 24</p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+           <p> \[ Parte = \frac{Porcentaje \times Total}{100} = \frac{25 \times 24}{100} = \frac{600}{100} = 6\] </p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>La Amazonía tiene 6 provincias.</p>
+        
+            <h4>Tema 2. Provincias de la región Sierra</h4>
+            <p>¿A qué porcentaje corresponden las 10 provincias de la Sierra, si el Ecuador está conformado por 24 provincias?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Parte: 10</p>
+            <p>Total: 24</p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+            <p>\[ Porcentaje = \frac{Parte \times 100}{Total} = \frac{10 \times 100}{24} = \frac{1000}{24} = 41,6\widehat{6} \]</p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>Las 10 provincias de la Sierra corresponden al \( 41,6\widehat{6} \) % del total de 24 provincias del Ecuador.</p>
+        
+            <h4>Tema 3. Cantidad de provincias del Ecuador</h4>
+            <p>¿Cuántas provincias hay en el Ecuador, conociendo que las 7 provincias de la Costa corresponden al \( 29,1\widehat{6} \) %?</p>
+        <h4>Paso 1. Identificar los datos disponibles</h4>
+            <p>Parte: 7</p>
+            <p>Porcentaje: \( 29,1\widehat{6} %? \) <span class="aclaracion-matematica">(el arco sobre el 6 significa que este dígito se repite indefinidamente)</span></p>
+        <h4>Paso 2. Aplicar la fórmula correspondiente</h4>
+            <p>\[ Total = \frac{Parte \times 100}{Porcentaje} = \frac{7 \times 100}{29,17} = \frac{700}{29,1\widehat{6}} = 24 \]</p>
+        <h4>Paso 3. Comunicar el resultado</h4>
+            <p>El Ecuador está conformado por 24 provincias.</p>  
+            
         <h3 class="subtitulo-tema">Calculadora para encontrar porcentajes</h3>
-        <p>...</p>   
+            <p>A continuación, puedes hacer cualquier cálculo de porcentaje, usando estas 3 calculadoras:</p>
+
+            <p>Para calcular la parte, cuando se conoce el porcentaje y el total:</p>
+
+            <div class="linea-unica-porcentaje">
+                
+                <div class="formula-teorica">
+                    \[ \text{Parte} = \frac{\text{Porcentaje} \times \text{Total}}{100} \]
+                </div>
+                
+                <span class="separador-igual">=</span>
+                
+                <div class="fraccion-html">
+                    <div class="numerador-html">
+                        <input type="text" id="txt-porcentaje" placeholder="Porcentaje">
+                        <span class="operador-por">×</span>
+                        <input type="text" id="txt-total" placeholder="Total">
+                    </div>
+                    <div class="denominador-html">
+                        100
+                    </div>
+                </div>
+                
+                <span class="separador-igual">=</span>
+                
+                <button type="button" id="btn-calcular" class="boton-resultado">Calcular</button>
+                
+            </div>                                
+            
+            <p>Para calcular el porcentaje, cuando se conoce la parte y el total:</p>
+
+    <div class="linea-unica-porcentaje">
+        
+        <div class="formula-teorica">
+            \[ \text{Porcentaje} = \frac{\text{Parte} \times 100}{\text{Total}} \]
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <div class="fraccion-html">
+            <div class="numerador-html">
+                <input type="text" id="txt-parte-pct" placeholder="Parte">
+                <span class="operador-por">×</span>
+                <span class="denominador-html" style="padding: 0 4px;">100</span>
+            </div>
+            <div class="denominador-html">
+                <input type="text" id="txt-total-pct" placeholder="Total">
+            </div>
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <button type="button" id="btn-calcular-pct" class="boton-resultado">Calcular</button>
+    </div>
+
+
+    <p>Para calcular el total, cuando se conoce la parte y el porcentaje:</p>
+
+    <div class="linea-unica-porcentaje">
+        
+        <div class="formula-teorica">
+            \[ \text{Total} = \frac{\text{Parte} \times 100}{\text{Porcentaje}} \]
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <div class="fraccion-html">
+            <div class="numerador-html">
+                <input type="text" id="txt-parte-tot" placeholder="Parte">
+                <span class="operador-por">×</span>
+                <span class="denominador-html" style="padding: 0 4px;">100</span>
+            </div>
+            <div class="denominador-html">
+                <input type="text" id="txt-porcentaje-tot" placeholder="Porcentaje">
+            </div>
+        </div>
+        
+        <span class="separador-igual">=</span>
+        
+        <button type="button" id="btn-calcular-tot" class="boton-resultado">Calcular</button>
+    </div>
+        
     </section>
+
 
     <section id="tendencia" class="contenedor-tema"> <!-- Diego -->
         <h2>Tendencia</h2>
@@ -317,7 +559,7 @@
         
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Indice de precios al consumidor</h4>
-        <img src="tendenciaImg.png"></img>
+        <img src="tendenciaImg.png">
         <h4>1. Media Móvil de 3 períodos (últimos 3 años)</h4>
         \[MM = \frac{0.27+1.27+0.20}{3} = \frac{1.74}{3} = 0.58\]
         
@@ -332,7 +574,7 @@
 
         <textarea id="inputDatosTendencia" placeholder="Ej: 2495, 5826, 8008, 9200"></textarea>
         <br>
-        <button onclick="calcularTendencia()">Analizar Tendencia</button>
+        <button onclick="calcularTendencia()">Analizar tendencia</button>
         
 
         <div class="calc-tendencia" id="contenedorResultadosBásicos" style="display:none; margin-top: 20px;">
@@ -355,14 +597,54 @@
     </section>
 
     <section id="interpretacion-de-graficos" class="contenedor-tema"> <!-- Francisco -->
-        <h2>Interpretación de gráficos</h2>
-        <p>...</p>
+        <h2>Interpretación de gráficos</h2>        
         <h3 class="subtitulo-tema">¿Qué es la interpretación de gráficos y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejercicio</h3>
-        <p>...</p>
+        <p>
+            Consiste en analizar representaciones visuales de datos 
+            —como barras, líneas o gráficos circulares— y obtener información importante. Sirve para
+            simplificar datos complejos y facilitar la identificación de patrones, tendencias 
+            y relaciones, con el fin de comprender un tema o tomar decisiones más informadas.
+        </p>
+
+        <h4>Gráfico de barras</h4>
+        <p>
+            Representa datos mediante barras rectangulares de diferentes tamaños. 
+            Sirve para para comparar cantidades entre distintas categorías de forma clara y visual.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="CantonesPoblados.png" alt="Cantones más poblados del Ecuador" style="width: 50%; max-width: 600px; height: auto;">
+        <p>
+            Interpretando el gráfico, observamos que Guayaquil y Quito son los cantones más habitados del Ecuador, mientras que Cuenca, 
+            Santo Domingo y Ambato registran poblaciones considerablemente más bajas que las dos primeras ciudades.          
+        </p>
+        
+        <h4>Gráfico de líneas</h4>
+        <p>           
+            Representa datos mediante puntos unidos por líneas rectas. 
+            Sirve para mostrar cambios, tendencias o variaciones de una o más variables a lo largo del tiempo.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="CostoCanastaFamiliar2017-2026.png" alt="Costo de canasta familiar básica entre 2017 y 2026" style="width: 50%; max-width: 600px; height: auto;">
+        <p>
+            El gráfico muestra que entre el 2017 y casi todo el 2021, el costo de la canasta estuvo relativemente estable, rondando los $ 710;
+            pero en el tiempo posterior, desde finales desde el 2021 hasta abril 2026, el costo ha tenido un ascenso constante, llegando a superar 
+            los $ 820, lo cual evidencia cómo en los últimos años se ha encarecido el presupuesto necesario para cubrir las necesidades básicas de un hogar.          
+        </p>
+
+        <h4>Gráfico circular (pastel)</h4>
+        <p>
+            Representa datos mediante sectores de un círculo, donde cada parte corresponde a una proporción del total.
+            Sirve para visualizar y comparar porcentajes o cantidades relativas, de manera clara y rápida.
+        </p>
+        <h4>Ejemplo:</h4>
+            <img src="TerritorioEcuador.png" alt="Distribución territorial del Ecuador" style="width: 50%; max-width: 600px; height: auto;">
+        <br>
+            <p>
+            Este gráfico circular demuestra una notable asimetría en la distribución territorial del Ecuador, donde la región del Oriente (Amazonía) representa
+            casi la mitad de la extensión total del país con un 45.15%. El resto del territorio se concentra de manera equitativa entre la Costa (26.78%) y la Sierra (24.65%),
+            mientras que la región Insular (Galápagos) junto con las zonas no delimitadas constituyen una porción marginal que, sumadas, apenas alcanzan el 3.42% del suelo nacional.        
+        </p>
+
     </section>
 
     <section id="analisis-de-datos" class="contenedor-tema"> <!-- Diego -->
@@ -374,17 +656,17 @@
             y respaldar la toma de decisiones. </p>
         <h3 class="subtitulo-tema">Ejemplo de un análisis de datos</h3>  
         <h4>Tema: Canasta familiar vital en Ecuador</h4>
-        <p>La gráfica presentada muestra el valor de la Canasta Familiar Vital en distintas ciudades del Ecuador durante 
+        <p>La gráfica presentada muestra el valor de la Canasta familiar vital en distintas ciudades del Ecuador durante 
             abril de 2026, así como el ingreso familiar mensual promedio. El valor nacional de la canasta se ubicó 
-            en 575 dólares, mientras que el ingreso familiar mensual fue aproximadamente de 638 dólares.</p>
-        <img src="canastaVitalImg.png"></img>
-        <P>Al analizar la información de la Canasta Familiar Vital de abril de 2026, se observa que el valor nacional 
+            en 575 dólares, mientras que el ingreso familiar mensual fue aproximadamente de 899.73 dólares.</p>
+        <img src="canastaVitalImg.png">
+        <P>Al analizar la información de la Canasta familiar vital de abril de 2026, se observa que el valor nacional 
             fue de 575 dólares. Sin embargo, existen diferencias entre ciudades. La canasta más costosa se registró 
             en Manta con 638 dólares, seguida de Quito con 603 dólares y Machala con 593 dólares. Por el contrario, 
             las ciudades con los valores más bajos fueron Santo Domingo con 533 dólares, Ambato con 544 dólares y 
             Esmeraldas con 548 dólares.</P>
             <p>
-                También se observa que el ingreso familiar mensual promedio fue de aproximadamente 638 dólares,
+                También se observa que el ingreso familiar mensual promedio fue de aproximadamente 899.73 dólares,
                  lo que permite cubrir el costo de la canasta familiar en la mayoría de las ciudades. 
                  No obstante, en Manta el ingreso promedio prácticamente coincide con el valor de la canasta, 
                  por lo que las familias tendrían menos recursos disponibles para otros gastos.
@@ -394,7 +676,7 @@
                 necesitan destinar una mayor parte de sus ingresos para cubrir sus necesidades básicas.
             </p>
             <h4>Conclusiones</h4>
-            <p>- La Canasta Familiar Vital presentó diferencias entre las ciudades del Ecuador durante abril de 2026.</p>
+            <p>- La Canasta familiar vital presentó diferencias entre las ciudades del Ecuador durante abril de 2026.</p>
             <p>- Manta fue la ciudad con el mayor costo de la canasta familiar, mientras que Santo Domingo registró el menor valor.</p>
             <p>- El ingreso familiar promedio permite cubrir la canasta familiar a nivel nacional.</p>
             <p>- El análisis de datos facilita la comparación de información y ayuda a comprender mejor la realidad económica de las 
@@ -404,15 +686,90 @@
 
     </section>
 
-    <section id="deteccion-basica-de-anomalias" class="contenedor-tema"> <!-- Francisco -->
-        <h2>Detección básica de anomalías</h2>
-        <p>...</p>
+     <section id="deteccion-basica-de-anomalias" class="contenedor-tema"> <!-- Francisco -->
+        <h2>Detección básica de anomalías</h2>       
         <h3 class="subtitulo-tema">¿Qué es la deteccion básica de anomalías y para qué sirve?</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
-        <p>...</p>
-        <h3 class="subtitulo-tema">Ejercicio</h3>
-        <p>...</p>
+        <p>
+            Es el proceso de identificar datos, comportamientos o valores que se alejan significativamente de lo normal dentro de un conjunto de información.
+            Sirve para descubrir errores, fraudes, riesgos o situaciones inusuales que pueden ser importantes para analizar y tomar decisiones.
+        </p>
+        <p>Se la puede utilizar para encontrar fraudes (por ejemplo, en tarjetas de crédito), fallos en maquinaria, intrusiones en redes, errores en datos 
+            o comportamientos raros en sistemas, permitiendo actuar a tiempo para prevenir riesgos o pérdidas.
+        </p>
+        <p>
+            Está profundamente ligada a la estadística, porque utiliza sus principios fundamentales para cuantificar qué es habitual y qué es un
+             "desvío"; para ello, usa los conceptos vistos en este página web, como media, mediana, moda y tendencia, además de otros como 
+             desviación estándar, dispersión y probabilidad.
+        </p>
+        <h3 class="subtitulo-tema">Ejemplo:</h3>
+        <p>
+            Imaginemos una gran empresa exportadora ecuatoriana.
+            Entre 2019 y 2024 declara utilidades cercanas a los 25 millones de dólares.
+            Sin embargo, en 2025 reporta una utilidad de apenas 1 millón de dólares.
+        </p>
+
+        <table>
+            <tr>
+                <th>Año</th>
+                <th>Utilidad (millones USD)</th>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>2025</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <p>
+            La <strong>mediana</strong> es 25 millones de dólares.
+            Esto indica que, en condiciones normales, la empresa suele obtener utilidades cercanas a ese valor.
+        </p>
+
+        <p>
+            La <strong>media</strong> es 21,86 millones de dólares.
+            Este valor es menor que la mediana porque la utilidad de 2025 reduce considerablemente el promedio.
+        </p>
+
+        <p>
+            Además, la <strong>tendencia</strong> entre 2019 y 2024 es estable,
+            ya que las utilidades se mantienen entre 24 y 27 millones de dólares.
+        </p>
+
+        <p>
+            Sin embargo, en 2025 la utilidad cae a 1 millón de dólares.
+            Este valor presenta una gran <strong>desviación</strong> respecto al comportamiento habitual de la serie.
+        </p>
+
+        <p>
+            Por ello, el dato de 2025 se considera una <strong>anomalía</strong> o valor atípico.
+            La estadística no permite determinar la causa de esta diferencia.
+            Sin embargo, una variación tan extrema justificaría una revisión más detallada para descartar errores de registro,
+            pérdidas extraordinarias o posibles casos de evasión fiscal.
+        </p>
+                
     </section>
 
     <section id="repaso" class="contenedor-tema-repaso">
@@ -429,7 +786,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
    
+    <script src="estadistica.js"></script>
 </body>
-
-     <script src="estadistica.js"></script>
 </html>

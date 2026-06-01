@@ -69,8 +69,13 @@
            \[\bar{x} = \frac{x_1 + x_2 + x_3 + \cdots + x_n}{n} \]
            <h4>¿Qué significa cada símbolo de la fórmula?</h4>
            <div class="formula-teorica">\( \overline{x} \) = Media aritmética o promedio</div>
+<<<<<<< HEAD
            <div>x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,…,x<sub>n</sub> = Valores o datos del conjunto</div>
            <div>n = Cantidad total de datos</div>
+=======
+           <p>x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,…,x<sub>n</sub> = Valores o datos del conjunto</p>
+           <p>n = Cantidad total de datos</p>
+>>>>>>> Rama_Diego
         <h3 class="subtitulo-tema">Ejemplo real paso a paso</h3>
         <h4>Tema: Tasa de empleo adecuado</h4>
         <h4>1. Identificar la cantidad de valores</h4>
@@ -227,6 +232,7 @@
                     Ingresa un valor en cada línea:
                 </p>
 
+<<<<<<< HEAD
 <textarea id="datos-mediana" rows="8" cols="15" placeholder="Ej: 
 24
 26 
@@ -236,6 +242,16 @@
 24
 21.6
 " oninput="validarEntradaMediana(this)"></textarea>
+=======
+<textarea id="datos-mediana" rows="8" cols="15" placeholder="Ej:
+24
+26 
+25
+28 
+27 
+24  
+26" oninput="validarEntradaMediana(this)"></textarea>
+>>>>>>> Rama_Diego
 
                 <br><br>
 
@@ -293,11 +309,15 @@
         <h4>Ejemplo de moda bimodal</h4>
         <p>Calcula la moda del siguiente conjunto de datos:</p>
         \[8 \ ; \ 7 \ ; \ 0 \ ; \ 6 \ ; \ 10 \ ; \ 9 \ ; \ 13 \ ; \ 8 \ ; \ 0 \ ;
-         \ 6 \ ; \ 2 \ ; \ 6 \ ; \ 5 \ ; \ 11 \ ; \ 10 \ ; \ 0 \ ; \ 9 \ ; \ 8 \ ; \ 6 \ ; 
-         \ 12 \ ; \ 3 \ ; \ 5 \ ; \ 11 \ ; \ 1 \ ; \ 4 \ ; \ 8 \ ; \ 10 \ ; \ 2 \ ; \ 5 \ ; \ 7\]
+
+
+        \ 6 \ ; \ 2 \ ; \ 6 \ ; \ 5 \ ; \ 11 \ ; \ 10 \ ; \ 0 \ ; \ 9 \ ; \ 8 \ ; \ 6 \ ; 
+        \ 12 \ ; \ 3 \ ; \ 5 \ ; \ 11 \ ; \ 1 \ ; \ 4 \ ; \ 8 \ ; \ 10 \ ; \ 2 \ ; \ 5 \ ; \ 7\]
         <p>Primero ponemos los números en orden:</p>
-        \[0 \ ; \ 0 \ ; \ 0 \ ; \ 1 \ ; \ 2 \ ; \ 2 \ ; \ 3 \ ; \ 4 \ ; \ 5 \ ; \ 5 \ ; \ 5 \ ; \ 6 \ ; \ 6 \ ; \ 6 \ ; 
-        \ 6 \ ; \ 7 \ ; \ 7 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 9 \ ; \ 9 \ ; \ 10 \ ; \ 10 \ ; \ 10 \ ; \ 11 \ ; \ 11 \ ; \ 12 \ ; \ 13\]
+        \[0 \ ; \ 0 \ ; \ 0 \ ; \ 1 \ ; \ 2 \ ; \ 2 \ ; \ 3 \ ; \ 4 \ ; \ 5 \ ; \ 5 \ ; \ 5 \ ; \ 6 \ ; \ 6 \ ; 
+        \ 6 \ ; \ 6 \ ; \ 7 \ ; \ 7 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 8 \ ; \ 9 \ ; \ 9 \ ; \ 10 \ ; \ 10 \ ; \ 10 \ ; 
+        \ 11 \ ; \ 11 \ ; \ 12 \ ; \ 13\]
+
         <p>Como puedes comprobar, el número 6 y el número 8 aparecen un total 
             de cuatro veces, el máximo número de repeticiones. Por lo tanto, 
             en este caso se trata de una moda bimodal y ambos números son la moda 
@@ -306,14 +326,18 @@
         \[Mo=\{ 6 \ ; \ 8\}\]
         <h4>Ejemplo de moda multimodal</h4>
         <p>Halla la moda del siguiente conjunto de datos:</p>
-        \[21 \ ; \ 27 \ ; \ 32 \ ; \ 15 \ ; \ 13 \ ; \ 20 \ ; \ 21 \ ; \ 21 \ ; \ 25 \ ; \ 27 \ ; \ 31 \ ; \ 30 \ ; \ 19 \ ; \ 20 \ ; \ 16 \ ; \ 22 \ ; 
-        \ 19 \ ; \ 20 \ ; \ 31 \ ; \ 18 \ ; \ 20 \ ; \ 25 \ ; \ 26 \ ; \ 15 \ ; \ 20 \ ; \ 31 \ ; \ 31 \ ; \ 27 \ ; \ 16 \ ; \ 17 \ ; \ 31 \ ; \ 27 \ ; \ 24 \ ; 
-        \ 23 \ ; \ 21 \ ; \ 27 \ ; \ 29 \ ; \ 36 \ ; \ 32 \ ; \ 30 \ ; \ 16 \ ; \ 22 \ ; \ 15 \ ; \ 14 \ ; \ 37\]
+
+        \[21 \ ; \ 27 \ ; \ 32 \ ; \ 15 \ ; \ 13 \ ; \ 20 \ ; \ 21 \ ; \ 21 \ ; \ 25 \ ; \ 27 \ ; \ 31 \ ; \ 30 \ ; \ 19 \ ; 
+        \ 20 \ ; \ 16 \ ; \ 22 \ ; \ 19 \ ; \ 20 \ ; \ 31 \ ; \ 18 \ ; \ 20 \ ; \ 25 \ ; \ 26 \ ; \ 15 \ ; \ 20 \ ; \ 31 \ ; 
+        \ 31 \ ; \ 27 \ ; \ 16 \ ; \ 17 \ ; \ 31 \ ; \ 27 \ ; \ 24 \ ; \ 23 \ ; \ 21 \ ; \ 27 \ ; \ 29 \ ; \ 36 \ ; \ 32 \ ; 
+        \ 30 \ ; \ 16 \ ; \ 22 \ ; \ 15 \ ; \ 14 \ ; \ 37\]
         <p>Como hay muchos datos, primero los ordenamos en orden creciente para 
             que así sea más fácil contarlos:</p>
-        \[13 \ ; \ 14 \ ; \ 15 \ ; \ 15 \ ; \ 15 \ ; \ 16 \ ; \ 16 \ ; \ 16 \ ; \ 17 \ ; \ 18 \ ; \ 19 \ ; \ 19 \ ; \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 21 \ ; 
-        \ 21 \ ; \ 21 \ ; \ 21 \ ; \ 22 \ ; \ 22 \ ; \ 23 \ ; \ 24 \ ; \ 25 \ ; \ 25 \ ; \ 26 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 29 \ ; \ 30 \ ; \ 30 \ ; 
-        \ 31 \ ; \ 31 \ ; \ 31 \ ; \ 31 \ ; \ 31 \ ; \ 32 \ ; \ 32 \ ; \ 36 \ ; \ 37\]
+        \[13 \ ; \ 14 \ ; \ 15 \ ; \ 15 \ ; \ 15 \ ; \ 16 \ ; \ 16 \ ; \ 16 \ ; \ 17 \ ; \ 18 \ ; \ 19 \ ; \ 19 \ ; \ 20 \ ; 
+        \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 20 \ ; \ 21 \ ; \ 21 \ ; \ 21 \ ; \ 21 \ ; \ 22 \ ; \ 22 \ ; \ 23 \ ; \ 24 \ ; \ 25 \ ; 
+        \ 25 \ ; \ 26 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 27 \ ; \ 29 \ ; \ 30 \ ; \ 30 \ ; \ 31 \ ; \ 31 \ ; \ 31 \ ; 
+        \ 31 \ ; \ 31 \ ; \ 32 \ ; \ 32 \ ; \ 36 \ ; \ 37\]
+
          <p>Los números que más se repiten son el 20, el 27 y el 31, los tres números 
             están repetidos cinco veces. De modo que la moda de este ejemplo es multimodal.</p>
             \[Mo=\{ 20 \ ; \ 27 \ ; \ 31\}\]

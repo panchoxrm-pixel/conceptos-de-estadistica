@@ -266,6 +266,7 @@ function calcularMediana(){
             datos[posicion - 1];
 
         formulaGeneral =
+
     "\\Large \\tilde{x}=x_{\\left(\\frac{n+1}{2}\\right)}";
 
 formulaDatos =
@@ -275,6 +276,7 @@ formulaDatos =
     + "=x_{("
     + posicion
     + ")}";
+
 
 
     }
